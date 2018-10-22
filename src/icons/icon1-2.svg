@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="63px" height="72px" viewBox="0 0 63 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>umbrella@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.234696 0.326714286 63.467976 0.326714286 63.467976 72.1751643 0.234696 72.1751643"></polygon>
+    </defs>
+    <g id="Art-board" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01.Main_Page_04-01" transform="translate(-692.000000, -3449.000000)">
+            <g id="Shippers-Icons" transform="translate(0.000000, 3330.000000)">
+                <g id="Icons" transform="translate(44.000000, 119.000000)">
+                    <g id="umbrella" transform="translate(648.000000, 0.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-20"></g>
+                        <path d="M62.23328,35.4939051 L-1,35.4939051 C0.88496,18.6034051 12.46664,5.58733368 28.502,4.44826225 C28.49936,3.19026225 28.24856,1.60190511 29.1224,0.663690823 C29.94872,-0.224309177 31.29248,-0.219023462 32.11616,0.66633368 C32.98208,1.60190511 32.73656,3.19819082 32.73656,4.44826225 C48.76664,5.58997654 60.35096,18.606048 62.23328,35.4939051 M28.70792,63.8623337 L28.70792,38.2266194 L32.86064,38.2266194 L32.86064,63.8623337 C32.86064,68.2679765 29.5316,71.849048 25.4396,71.849048 C20.59784,71.849048 18.0872,67.8319051 18.01328,63.0086908 L22.1528,63.0086908 C22.21088,65.2604051 22.92368,67.3799765 25.4396,67.3799765 C27.24008,67.3799765 28.70792,65.8021908 28.70792,63.8623337" id="Fill-19" fill="#FF3B00" mask="url(#mask-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

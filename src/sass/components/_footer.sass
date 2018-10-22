@@ -1,0 +1,77 @@
+// FOOTER
+.footer
+  background: #363636
+  padding: 28px 0
+  transform: translate3d(0,0,0)
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__logo
+    img
+      width: 140px
+      transition: all $transitionSpeed $ease
+      &:hover
+        opacity: 0.8
+  &__link
+    color: #fff
+    font-size: 14px
+    transition: all $transitionSpeed $ease
+    &:hover
+      color: rgba(#fff, 0.8)
+    &--number
+      font-size: 20px
+      font-weight: 600
+  &__social
+    a
+      color: #fff
+      font-size: 18px
+      display: inline-block
+      margin: 0 12px
+      transition: all $transitionSpeed $ease
+      &:last-child
+        margin-right: 0
+      &:hover
+        &:nth-child(1)
+          color: $vk
+        &:nth-child(2)
+          color: $facebook
+        &:nth-child(3)
+          color: $ok
+        &:nth-child(4)
+          color: $youtube
+
++r($desktop)
+  .footer
+    &__logo
+      img
+        width: 110px
+    &__link
+      font-size: 12px
+      &--number
+        font-size: 14px
+    &__social
+      a
+        font-size: 16px
+        margin: 0 5px
+
++r($tablet)
+  .footer
+    padding: 28px 0 39px
+    &__wrapper
+      flex-direction: column
+    &__logo
+      padding-bottom: 10px
+      img
+        width: 140px
+    &__link
+      font-size: 14px
+      margin: 10px 0
+      display: inline-block
+      &--number
+        font-size: 20px
+    &__social
+      padding-top: 25px
+      a
+        font-size: 22px
+        margin: 0 18px

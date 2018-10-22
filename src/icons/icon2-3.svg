@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="69px" height="70px" viewBox="0 0 69 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>reduce@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 69 0 69 68.9211429 0 68.9211429"></polygon>
+    </defs>
+    <g id="Art-board" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01.Main_Page_04-01" transform="translate(-1148.000000, -5232.000000)">
+            <g id="Carriers-Icons" transform="translate(0.000000, 5110.000000)">
+                <g id="Icons-Carrier" transform="translate(44.000000, 119.862857)">
+                    <g id="reduce" transform="translate(1104.000000, 2.996571)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <path d="M44.31111,49.2374613 L34.51656,39.4672978 L24.72201,49.2670971 L19.71192,44.2703642 L29.48508,34.5084711 L19.67604,24.7086718 L24.7434,19.6526674 L34.50069,29.4035331 L44.27109,19.658181 L49.29567,24.6817929 L39.50043,34.4429967 L49.32534,44.2262551 L44.31111,49.2374613 Z M34.5,0 C15.44427,0 0,15.4264651 0,34.4602268 C0,53.4939885 15.44427,68.9211429 34.5,68.9211429 C53.55366,68.9211429 69,53.4939885 69,34.4602268 C69,15.4264651 53.55573,0 34.5,0 Z" id="Fill-1" fill="#FF3B00" mask="url(#mask-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,116 @@
+---
+title: Homepage
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: firstscreen
+  section
+    //- .firstscreen.firstscreen--fullscreen
+    .firstscreen
+      .container
+        .firstscreen__info
+          h1(data-aos='fade-up') Закажите монтаж кровли у профессионалов!
+          p(data-aos='fade-up') Мы заботимся о предоставлении качественного сервиса на всех этапах монтажа кровли, поэтому создали «Клуб Ондулин», объединив в нем лучших специалистов и проверенных подрядчиков.
+          p(data-aos='fade-up') Предлагаем вам ознакомиться со списком монтажных бригад из нашего «Клуба профессиональных строителей» и выбрать тех, кто идеально подходит под ваши запросы.
+        .firstscreen__image
+          .firstscreen__image-cont
+            img(src="img/main.jpg", alt="")
+      .firstscreen__search(data-aos='fade-up')
+        .container
+          p.firstscreen__search-title Подбор подрядчика
+          .firstscreen__search-grid
+            .firstscreen__search-item
+              select
+                option(value="val1-1") Регион строительства
+                option(value="val1-2") Регион строительства
+                option(value="val1-3") Регион строительства
+            .firstscreen__search-item
+              select
+                option(value="val2-1") Тип подрядчика
+                option(value="val2-2") Тип подрядчика
+                option(value="val2-3") Тип подрядчика
+            .firstscreen__search-item
+              select
+                option(value="val3-1") Кровля под ключ (материалы+работа)
+                option(value="val3-2") Кровля под ключ (материалы+работа)
+                option(value="val3-3") Кровля под ключ (материалы+работа)
+            .firstscreen__search-item
+              a.btn(href="#") Показать
+        
+  // END SECTION :: firstscreen
+
+  // BEGIN SECTION :: mobile-info
+  
+  section.mobile-info
+    .container(data-aos='fade-up')
+      p Мы заботимся о предоставлении качественного сервиса на всех этапах монтажа кровли, поэтому создали «Клуб Ондулин», объединив в нем лучших специалистов и проверенных подрядчиков.
+      p Предлагаем вам ознакомиться со списком монтажных бригад из нашего «Клуба профессиональных строителей» и выбрать тех, кто идеально подходит под ваши запросы.
+    .mobile-info__image
+      img(src="img/main.jpg", alt="" data-aos='fade-up')
+
+  // END SECTION :: mobile-info
+
+  // BEGIN SECTION :: warranty
+  section.warranty(data-aos='fade-up')
+    .container
+      p.warranty__title Сертифицированные подрядчики — гарантия высокого качества сервиса
+        .warranty__grid
+          .warranty__left
+            a.warranty__image(href="#")
+              img(src="img/cert.jpg", alt="")
+            .warranty__info
+              .warranty__info-i
+                p.warranty__info-title Виды сертификации
+                ul
+                  li
+                    p — Продажа продукции Onduline
+                  li
+                    p — Монтаж Onduline Smart
+                  li
+                    p — Монтаж черепицы Onduline
+              .warranty__info-i
+                p.warranty__info-title Уровни сертификации
+                ul
+                  li
+                    p — Золотой сертификат
+                  li
+                    p — Серебряный сертификат
+                  li
+                    p — Бронзовый уровень
+          .warranty__right
+            p Уважаемые клиенты! Финестра – торговая компания, сотрудничающая с множеством строительных бригад от Красноярска до Находки. В разделе «услуги монтажа» отобраны самые лучшие строители и строительные компании, с которыми мы сотрудничаем много лет. Они прекрасно ориентируются в нашем ассортименте, и мы даём гарантию на материалы, смонтированные ими, ведь мы знаем их объекты и уровень мастерства.
+            p Предлагаем вам ознакомиться со списком монтажных бригад из нашего «Клуба профессиональных строителей» и выбрать тех, кто идеально подходит под ваши запросы.
+            p Мы с радостью примем от вас любые комментарии и замечания по качеству работ строителей из нашего клуба, так как нам не безразлично, как будет выглядеть ваш дом после монтажа, а также спустя много лет.
+            a.btn(href="#") Стать сертифицированным подрядчиком
+  // END SECTION :: warranty
+
+  // BEGIN SECTION :: questions
+  section.questions(data-aos='fade-up')
+    .container
+      .questions__title Остались вопросы?
+        span  — 
+        | просто напишите нам
+        span , мы поможем
+      .questions__desc или позвоните по телефону горчей линии 
+        a(href="tel:+88005056980") 8 800 505 69 80
+      form.js-question(action="#")
+        .questions__grid
+          .questions__item
+            .input-container
+              input(type="text" placeholder="Имя")
+          .questions__item
+            .input-container
+              input(type="text" placeholder="Эл. почта")
+          .questions__item
+            .input-container
+              input(type="text" placeholder="Телефон")
+        .questions__item.questions__item--full
+          .input-container
+            textarea(type="text" placeholder="Вопрос" rows="1")
+        .questions__item.questions__item--middle
+          input.btn(type="submit" value="Отправить вопрос")
+          p Отправляя форму, я подтверждаю своё
+            br 
+            a(href="#") согласие на обработку персональных данных
+  // END SECTION :: questions

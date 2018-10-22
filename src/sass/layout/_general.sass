@@ -1,0 +1,130 @@
+*
+  box-sizing: border-box
+  outline: none
+
+h1,
+h2,
+h3,
+h4,
+p
+  margin: 0
+
+a
+  color: inherit
+  text-decoration: none
+  &:hover, &:focus
+    text-decoration: none
+
+ul
+  list-style: none
+  li
+    display: inline-block
+
+body, html
+  background: #ffffff
+  color: $fontColor
+  font-family: 'Open Sans', sans-serif
+  font-size: 16px
+  min-width: 320px
+  max-width: 100%
+  margin: 0
+  overflow-x: hidden
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  &.is-fixed
+    overflow: hidden
+
+.page
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  &__content
+    // used for sticky footer (flexbox way)
+    flex: 1 0 auto
+    display: flex
+    flex-direction: column
+    // header offset ex
+    // padding-top: 100px
+
+.container
+  max-width: 1280px
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+  padding-left: 40px
+  padding-right: 40px
+  // outline: 1px solid red
+
++r($tablet)
+  .container
+    padding-left: 20px
+    padding-right: 20px
+
+input
+  -moz-appearance: none
+  -webkit-appearance: none
+
+.btn
+  font-size: 14px
+  display: inline-block
+  line-height: 1
+  padding: 
+  color: #fff
+  background: $redColor
+  transition: all $transitionSpeed $ease
+  padding: 13px
+  text-decoration: none
+  border: none
+  text-align: center
+  cursor: pointer
+  &:hover
+    background: darken($redColor, 5)
+
+.input-container
+  input,
+  textarea
+    border: 1px solid #d7d7d7
+    font-size: 14px
+    font-family: 'Open Sans', sans-serif
+    padding: 16px 19px
+    transition: all $transitionSpeed $ease
+    color: $fontColor
+    width: 100%
+    resize: none
+    &::-webkit-input-placeholder
+      color: #959595
+    &::-moz-placeholder
+      color: #959595
+    &:-ms-input-placeholder
+      color: #959595
+    &-moz-placeholder
+      color: #959595
+  &.has-error
+    input,
+    textarea
+      border-color: $redColor
+
+
+// REMOVE FOR PRODUCTION !
+.dev-bp-debug
+  background: black
+  position: fixed
+  top: 0
+  right: 0
+  z-index: 9999
+  color: white
+  padding: 5px
+  font-size: 12px
+  border-bottom-left-radius: 5px
+
+
+.js-transition-overlay
+  position: fixed
+  top: 0
+  left: -100%
+  bottom: 0
+  z-index: 7
+  background: #252525
+  width: 100vw
+  will-change: transform
+  backface-visibility: hidden

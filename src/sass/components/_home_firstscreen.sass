@@ -1,0 +1,114 @@
+.firstscreen
+  // padding: 105px 0 165px
+  // min-height: 100vh
+  // display: flex
+  // align-items: center
+  // position: relative
+  max-width: 1920px
+  padding-top: 105px
+  position: relative
+  z-index: 2
+  &--fullscreen
+    // min-height: 100vh
+    display: flex
+    align-items: center
+    position: relative
+  .container
+    position: relative
+    overflow: visible
+  &__image
+    width: 50%
+    height: 100%
+    max-height: 100vh
+    max-width: 960px
+    left: 50%
+    top: 0
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    img
+      width: auto
+      height: 100%
+      max-width: 960px
+  &__image-cont
+    background: rgba(0,0,0,0.2)
+    height: 100%
+  &__info
+    // min-height: 300px
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    flex-direction: column
+    padding-top: 89px
+    padding-bottom: 121px
+    h1
+      color: #fff
+      font-family: $merriweather
+      color: $redColor
+      max-width: 495px
+      font-size: 36px
+      line-height: 1.2
+      padding-bottom: 25px
+      width: 48%
+    p
+      color: $fontColor
+      margin-top: 25px
+      margin-top: 25px
+      padding-left: 100px
+      max-width: 495px
+      font-size: 14px
+      line-height: 1.75
+      width: 48%
+  &__search
+    background: #d7d7d7
+    padding: 30px 0 51px
+  &__search-title
+    padding: 0
+    text-transform: uppercase
+    font-size: 18px
+    color: $fontColor
+    font-weight: 600
+    margin: 0
+  &__search-grid
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 28px
+  &__search-item
+    width: 26.6%
+    margin-right: 15px
+    &:last-child
+      width: 15%
+      margin-right: 0
+      a
+        width: 100%
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+  .firstscreen
+
++r($tablet)
+  .firstscreen
+    padding-top: 50px
+    &__image
+      display: none
+    &__info
+      width: 100%
+      padding-top: 27px
+      padding-bottom: 0
+      h1
+        font-size: 24px
+        max-width: 80%
+        width: 100%
+      p
+        display: none
+    &__search
+      padding-bottom: 27px
+    &__search-grid
+      flex-wrap: wrap
+    &__search-item
+      width: 100%
+      margin-right: 0
+      margin-bottom: 11px
+      &:last-child
+        width: 100%

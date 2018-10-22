@@ -1,0 +1,65 @@
+.questions
+  padding: 65px 0 99px
+  text-align: center
+  &__title
+    font-size: 40px
+    color: $fontColor
+    font-weight: 600
+  &__desc
+    font-size: 14px
+    color: $fontColor
+    margin-top: 16px
+    a
+      display: inline
+      transition: all $transitionSpeed $ease
+      cursor: pointer
+      &:hover
+        color: $redColor
+  &__grid
+    display: flex
+    width: 100%
+    align-items: flex-start
+    justify-content: space-between
+    margin-top: 48px
+  &__item
+    max-width: 32.7%
+    width: 100%
+    &--full
+      max-width: 100%
+    &--middle
+      margin: 0 auto
+      p
+        font-size: 10px
+        margin-top: 18px
+        letter-spacing: 0.5px
+      a
+        color: $redColor
+        border-bottom: 1px solid transparent
+        transition: all $transitionSpeed $ease
+        &:hover
+          border-color: $redColor
+    .input-container
+      margin-bottom: 19px
+    .btn
+      padding: 17px
+      width: 100%
+
++r($tablet)
+  .questions
+    padding: 35px 0 50px
+    &__title
+      font-size: 24px
+      line-height: 1.1
+      span
+        display: none
+    &__desc
+      max-width: 210px
+      margin: 19px auto 0
+      line-height: 1.5
+    &__grid
+      margin-top: 28px
+      flex-wrap: wrap
+    &__item
+      max-width: 100%
+      textarea
+        min-height: 100px
