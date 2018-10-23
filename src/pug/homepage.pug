@@ -22,23 +22,230 @@ block content
           .firstscreen__search-grid
             .firstscreen__search-item
               select
-                option(value="val1-1") Регион строительства
-                option(value="val1-2") Регион строительства
-                option(value="val1-3") Регион строительства
+                option(value="val1-1" selected disabled) Регион строительства
+                option(value="val1-2") Регион #1
+                option(value="val1-3") Регион #2
             .firstscreen__search-item
               select
-                option(value="val2-1") Тип подрядчика
-                option(value="val2-2") Тип подрядчика
-                option(value="val2-3") Тип подрядчика
+                option(value="val2-1" selected disabled) Тип подрядчика
+                option(value="val2-2") Тип #1
+                option(value="val2-3") Тип #2
             .firstscreen__search-item
               select
-                option(value="val3-1") Кровля под ключ (материалы+работа)
-                option(value="val3-2") Кровля под ключ (материалы+работа)
-                option(value="val3-3") Кровля под ключ (материалы+работа)
+                option(value="val3-1" selected disabled) Кровля под ключ (материалы+работа)
+                option(value="val3-2") Кровля под ключ #1
+                option(value="val3-3") Кровля под ключ #2
             .firstscreen__search-item
               a.btn(href="#") Показать
         
   // END SECTION :: firstscreen
+
+  // END SECTION :: master
+  section.master
+    .master__item
+      .container
+        .master__grid
+          .master__image
+            .master__image-cont
+              img(src="img/master-1.jpg", alt="")
+            p Частный специалист
+          .master__coop
+            .master__info
+              p.master__title Константинопольский Константин К.
+              .master__row
+                p Основной регион:
+                p Иркутск
+              .master__row
+                p Возможность выезда:
+                p 150 км
+              .master__row
+                p Портфолио:
+                p.photo 33 объекта с фото
+              .master__contacts
+                a.master__contacts-link(href="#" js-show-contacts) Контакты
+                .master__contacts-hidden
+                  a(href="#") 
+                    span +7 916 123-45-67
+                  a(href="#") 
+                    span +7 4859 230-105
+                  a.master__mail(href="#") stroysnab2005@yandex.ru
+            .master__services
+              p.master__title Услуги
+              .master__list
+                p — Кровля под ключ
+          //- .master__sertificate
+          //-   p.master__title Сертификат
+          //-   a.master__sert(href="http://www.flagmankrov.ru/upload/iblock/222/222b3a0b23eb284d11454f083b03e4b2.jpg" data-effect="mfp-zoom-in" js-popup-image)
+          //-     img(src="img/cert.jpg", alt="")
+          .master__buttons
+            a.btn(href="#") Фото объектов
+            a.btn(href="#") Отправить заказ
+
+    .master__item
+      .container
+        .master__grid
+          .master__image
+            .master__image-cont
+              img(src="img/master-2.png", alt="")
+            p Строительная компания
+          .master__coop
+            .master__info
+              p.master__title ООО «СтройСнаб»
+              .master__row
+                p Основной регион:
+                p Иркутск
+              .master__row
+                p Возможность выезда:
+                p 150 км
+              .master__row
+                p Портфолио:
+                p.photo 24 объекта с фото
+              .master__contacts
+                a.master__contacts-link(href="#" js-show-contacts) Контакты
+                .master__contacts-hidden
+                  a(href="#") 
+                    span +7 916 123-45-67
+                  a(href="#") 
+                    span +7 4859 230-105
+                  a.master__mail(href="#") stroysnab2005@yandex.ru
+            .master__services
+              p.master__title Услуги
+              .master__list
+                p — Кровля под ключ
+                p — Продажа Одулин, Ондувилла
+                p — Монтажные работы
+          .master__sertificate
+            p.master__title Сертификат
+            a.master__sert(href="http://www.flagmankrov.ru/upload/iblock/222/222b3a0b23eb284d11454f083b03e4b2.jpg" data-effect="mfp-zoom-in" js-popup-image)
+              img(src="img/cert.jpg", alt="")
+          .master__buttons
+            a.btn(href="#") Фото объектов
+            a.btn(href="#") Отправить заказ
+    
+    .master__item
+      .container
+        .master__grid
+          .master__image
+            .master__image-cont
+              img(src="img/master-3.jpg", alt="")
+            p Строительная бригада
+          .master__coop
+            .master__info
+              p.master__title Константинопольский Константин К.
+              .master__row
+                p Основной регион:
+                p Иркутск
+              .master__row
+                p Возможность выезда:
+                p 150 км
+              .master__row
+                p Портфолио:
+                p Нет
+              .master__contacts
+                a.master__contacts-link(href="#" js-show-contacts) Контакты
+                .master__contacts-hidden
+                  a(href="#") 
+                    span +7 916 123-45-67
+                  a(href="#") 
+                    span +7 4859 230-105
+                  a.master__mail(href="#") stroysnab2005@yandex.ru
+            .master__services
+              p.master__title Услуги
+              .master__list
+                p — Кровля под ключ
+                p — Монтажные работы
+          .master__buttons
+            a.btn(href="#") Фото объектов
+            a.btn(href="#") Отправить заказ
+          //- .master__sertificate
+          //-   p.master__title Сертификат
+          //-   a.master__sert(href="http://www.flagmankrov.ru/upload/iblock/222/222b3a0b23eb284d11454f083b03e4b2.jpg" data-effect="mfp-zoom-in" js-popup-image)
+          //-     img(src="img/cert.jpg", alt="")
+
+    .master__item
+      .container
+        .master__grid
+          .master__image
+            .master__image-cont
+              img(src="img/master-4.jpg", alt="")
+            p Частный специалист
+          .master__coop
+            .master__info
+              p.master__title Антонов Станислав Николаевич
+              .master__row
+                p Основной регион:
+                p Екатеринбург
+              .master__row
+                p Возможность выезда:
+                p 150км 
+              .master__row
+                p Портфолио:
+                p.photo 10 объектов с фото
+              .master__contacts
+                a.master__contacts-link(href="#" js-show-contacts) Контакты
+                .master__contacts-hidden
+                  a(href="#thank" data-effect="mfp-zoom-in" js-popup) 
+                    span +7 916 123-45-67
+                  a.master__mail(href="#") antonovstas@yandex.ru
+            .master__services
+              p.master__title Услуги
+              .master__list
+                p — Монтажные работы
+          .master__sertificate
+            p.master__title Сертификат
+            a.master__sert(href="http://www.flagmankrov.ru/upload/iblock/222/222b3a0b23eb284d11454f083b03e4b2.jpg" data-effect="mfp-zoom-in" js-popup-image)
+              img(src="img/cert.jpg", alt="")
+          .master__buttons
+            a.btn(href="#") Фото объектов
+            a.btn(href="#") Отправить заказ
+          // Popup itself
+          #thank.white-popup.mfp-with-anim.mfp-hide
+            | You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.
+
+    .master__item
+      .container
+        .master__grid
+          .master__image
+            .master__image-cont
+              img(src="img/master-5.png", alt="")
+            p Строительная компания
+          .master__coop
+            .master__info
+              p.master__title ООО «СибСтрой»
+              .master__row
+                p Основной регион:
+                p Омск
+              .master__row
+                p Возможность выезда:
+                p 150км
+              .master__row
+                p Портфолио:
+                p.photo 5 объектов с фото
+              .master__contacts
+                a.master__contacts-link(href="#" js-show-contacts) Контакты
+                .master__contacts-hidden
+                  a(href="#") 
+                    span +7 916 123-45-67
+                  a.master__mail(href="#") antonovstas@yandex.ru
+            .master__services
+              p.master__title Услуги
+              .master__list
+                p — Монтажные работы
+          //- .master__sertificate
+          //-   p.master__title Сертификат
+          //-   a.master__sert(href="http://www.flagmankrov.ru/upload/iblock/222/222b3a0b23eb284d11454f083b03e4b2.jpg" data-effect="mfp-zoom-in" js-popup-image)
+          //-     img(src="img/cert.jpg", alt="")
+          .master__buttons
+            a.btn(href="#") Фото объектов
+            a.btn(href="#") Отправить заказ
+    .container
+      .master__btn-container
+        a.btn(href="#") Показать ещё 10 подрядчиков
+    
+
+  div(data-teleport-target="mobile-select")
+
+  // END SECTION :: master
 
   // BEGIN SECTION :: mobile-info
   

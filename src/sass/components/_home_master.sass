@@ -1,0 +1,299 @@
+.master
+  &__item
+    padding: 50px 0 90px
+    background: #fff
+    position: relative
+    transition: all $transitionSpeed $ease
+    min-height: 355px
+    &:hover
+      box-shadow: 0 0 40px rgba(0,0,0,0.15)
+      z-index: 2
+    &:nth-child(even)
+      background: #fafafa
+  &__buttons
+    padding-top: 36px
+    margin-bottom: -11px
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    transition: all $transitionSpeed $ease
+    position: absolute
+    left: 220px
+    top: 181px
+    .btn
+      min-width: 178px
+      border: 2px solid $redColor
+      color: $redColor
+      background: transparent
+      margin-right: 9px
+      padding: 11px
+      &:hover
+        color: #fff
+        background: $redColor
+  &__image
+    min-width: 160px
+    min-height: 160px
+    max-width: 160px
+    position: relative
+    text-align: center
+    // outline: 1px solid red
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    padding-top: 18px
+    img
+      width: 100%
+      max-width: 160px
+      height: auto
+    p
+      padding-top: 4px
+      letter-spacing: 0.4px
+      font-size: 11px
+      color: #959595
+      width: 
+      text-align: center
+      line-height: 1.3
+      display: inline-block
+  &__coop
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    position: relative
+    width: 69%
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    position: relative
+  &__info
+    position: relative
+    padding-top: 48px
+    margin-left: 60px
+    width: 56%
+    z-index: 2
+    // outline: 1px solid red
+    p
+      font-size: 13px
+      color: $fontColor
+      line-height: 1.3
+      letter-spacing: 0.3px
+      &.photo
+        color: $redColor
+      &.master__title
+        font-size: 18px
+        color: $redColor
+        position: absolute
+        left: 0
+        top: 15px
+    a
+      font-size: 13px
+      color: $fontColor
+      line-height: 1.3
+      letter-spacing: 0.3px
+  &__row
+    display: flex
+    align-items: flex-start
+    margin: 14px 0
+    p:nth-child(1)
+      min-width: 165px
+    a
+      color: $redColor
+  &__contacts
+    margin-top: 26px
+    // overflow: hidden
+    display: flex
+    flex-wrap: nowrap
+    position: relative
+    a
+      letter-spacing: 0.4px
+      margin: 0 15px
+      transition: all $transitionSpeed $ease
+      &:hover
+        color: $redColor
+      &.master__contacts-link
+        margin-left: 0
+        margin-right: 30px
+        color: $redColor
+        border-bottom: 1px dashed $redColor
+        font-weight: 600
+        &:hover
+          border-color: transparent
+      &.master__mail
+        color: $redColor
+        border-bottom: 1px dashed transparent
+        &:hover
+          border-color: $redColor
+    &.show
+      .master__contacts-hidden
+        max-width: 200%
+      a.master__contacts-link
+        border-color: transparent
+        color: $fontColor
+  &__contacts-hidden
+    max-width: 0
+    overflow: hidden
+    display: flex
+    flex-direction: row
+    align-items: center
+    transition: all $transitionSpeed $ease
+    position: absolute
+    left: 94px
+    a
+      min-width: 120px
+  &__services
+    position: relative
+    display: flex
+    flex-direction: column
+    padding-top: 48px
+    margin-left: 0.5%
+    width: 36%
+    // outline: 1px solid red
+    p
+      font-size: 13px
+      color: $fontColor
+      line-height: 1.3
+      letter-spacing: 0.3px
+      &.master__title
+        font-size: 18px
+        position: absolute
+        left: 0
+        top: 15px
+  &__list
+    p
+      margin: 14px 0
+  &__sertificate
+    position: relative
+    display: flex
+    flex-direction: column
+    padding-top: 48px
+    max-width: 150px
+    margin-left: 3.5%
+    p
+      &.master__title
+        font-size: 18px
+        position: absolute
+        left: 0
+        top: 15px
+  &__sert
+    margin-right: 10px
+    img
+      max-width: 88px
+      height: auto
+      margin-top: 4px
+
+  &__btn-container
+    max-width: 419px
+    margin: 25px auto 78px
+    .btn
+      width: 100%
+      border: 2px solid $redColor
+      color: $redColor
+      background: transparent
+      &:hover
+        color: #fff
+        background: $redColor
+
++r($desktop)
+  .master
+    &__item
+      padding: 40px 0 80px
+    &__info
+      // margin-left: 50px
+      width: 100%
+      padding-top: 13px
+      p
+        &.master__title
+          position: static
+    &__services
+      // padding-left: 50px
+      margin-left: 60px
+      width: 100%
+      padding-top: 26px
+      p
+        &.master__title
+          position: static
+    &__coop
+      flex-direction: column
+    &__buttons
+      top: auto
+      bottom: -40px
+      padding-top: 0
+    &__btn-container
+      max-width: 340px
+    &__contacts-hidden
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+
++r($tablet)
+  .master
+    &__grid
+      flex-direction: column
+      align-items: center
+      justify-content: center
+    &__image
+      min-width: 100px
+      min-height: 100px
+      max-width: 100%
+      padding-top: 0
+      img
+        max-width: 100%
+        width: auto
+        height: 100px
+    &__coop
+      align-self: flex-start
+      width: 100%
+    &__info
+      width: 100%
+      padding-top: 20px
+      margin-left: 0
+      p
+        &.master__title
+          text-align: center
+          line-height: 1.4
+          padding-bottom: 5px
+    &__row
+      margin: 15px 0
+      p
+        &:nth-child(1)
+          min-width: 100px
+          max-width: 100px
+          margin-right: 7px
+    &__contacts
+      margin-top: 33px
+      a
+        &.master__contacts-link
+          margin-right: 23px
+      &.show
+        .master__contacts-hidden
+          max-width: 100%
+          max-height: 150px
+    &__contacts-hidden
+      left: 0
+      position: static
+      max-width: 100%
+      max-height: 0
+      margin-bottom: -10px
+      a
+        margin: 0 0 8px 0
+    &__services
+      margin-left: 0
+      padding-top: 25px
+      p
+        &.master__title
+          padding-bottom: 8px
+    &__buttons
+      position: static
+      bottom: 0
+      margin-bottom: 0
+      flex-wrap: wrap
+      margin-top: 15px
+      .btn
+        margin: 10px auto
+        width: 100%
+    &__item
+      padding-bottom: 32px
+    &__sertificate
+      margin-left: 0
+      align-self: flex-start
