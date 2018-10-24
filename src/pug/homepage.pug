@@ -22,9 +22,48 @@ block content
           .firstscreen__search-grid
             .firstscreen__search-item
               select
-                option(value="val1-1" selected disabled) Регион строительства
-                option(value="val1-2") Регион #1
-                option(value="val1-3") Регион #2
+                option(value="val1-empty" selected disabled) Регион строительства
+                option(value="val1-1") Регион #1
+                option(value="val1-2") Регион #2
+                option(value="val1-3") Регион #3
+                option(value="val1-4") Регион #4
+                option(value="val1-5") Регион #5
+                option(value="val1-6") Регион #6
+                option(value="val1-7") Регион #7
+                option(value="val1-8") Регион #8
+                option(value="val1-9") Регион #9
+                option(value="val1-10") Регион #10
+                option(value="val1-11") Регион #11
+                option(value="val1-12") Регион #12
+                option(value="val1-13") Регион #13
+                option(value="val1-14") Регион #14
+                option(value="val1-15") Регион #15
+                option(value="val1-16") Регион #16
+                option(value="val1-17") Регион #17
+                option(value="val1-18") Регион #18
+                option(value="val1-19") Регион #19
+                option(value="val1-20") Регион #20
+                option(value="val1-21") Регион #21
+                option(value="val1-22") Регион #22
+                option(value="val1-23") Регион #23
+                option(value="val1-24") Регион #24
+                option(value="val1-25") Регион #25
+                option(value="val1-26") Регион #26
+                option(value="val1-27") Регион #27
+                option(value="val1-28") Регион #28
+                option(value="val1-29") Регион #29
+                option(value="val1-30") Регион #30
+                option(value="val1-31") Регион #31
+                option(value="val1-32") Регион #32
+                option(value="val1-33") Регион #33
+                option(value="val1-34") Регион #34
+                option(value="val1-35") Регион #35
+                option(value="val1-36") Регион #36
+                option(value="val1-37") Регион #37
+                option(value="val1-38") Регион #38
+                option(value="val1-39") Регион #39
+                option(value="val1-40") Регион #40
+
             .firstscreen__search-item
               select
                 option(value="val2-1" selected disabled) Тип подрядчика
@@ -305,16 +344,20 @@ block content
         .questions__grid
           .questions__item
             .input-container
-              input(type="text" placeholder="Имя")
+              input#f1(type="text" name="name" placeholder="Имя")
+              label(for="f1") Имя
           .questions__item
             .input-container
-              input(type="text" placeholder="Эл. почта")
+              input#f2(type="text" name="email" placeholder="Эл. почта")
+              label(for="f2") Эл. почта
           .questions__item
             .input-container
-              input(type="text" placeholder="Телефон")
+              input#f3(type="text" name="phone" placeholder="Телефон")
+              label(for="f3") Телефон
         .questions__item.questions__item--full
           .input-container
-            textarea(type="text" placeholder="Вопрос" rows="1")
+            textarea#4(type="text" name="area" placeholder="Вопрос" rows="1")
+            label(for="f4") Вопрос
         .questions__item.questions__item--middle
           input.btn(type="submit" value="Отправить вопрос")
           p Отправляя форму, я подтверждаю своё

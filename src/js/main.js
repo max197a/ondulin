@@ -375,42 +375,30 @@ $(document).ready(function() {
     /////////////////////
     // REGISTRATION FORM
     ////////////////////
-    $(".js-registration-form").validate({
+
+    $(".js-question").validate({
       errorPlacement: validateErrorPlacement,
       highlight: validateHighlight,
       unhighlight: validateUnhighlight,
       submitHandler: validateSubmitHandler,
       rules: {
-        // first_name: "required",
-        // phone: "required",
+        name: "required",
+        phone: validatePhone,
         email: {
           required: true,
           email: true
         },
-        password: {
-          required: true
-          // minlength: 6
-        }
+        area: "required"
         // phone: validatePhone
-      }
-    });
-    $(".js-form").validate({
-      errorPlacement: validateErrorPlacement,
-      highlight: validateHighlight,
-      unhighlight: validateUnhighlight,
-      submitHandler: validateSubmitHandler,
-      rules: {
-        first_name: "required",
-        // phone: "required",
+      },
+      messages: {
+        name: "Заполните это поле",
+        phone: "Заполните это поле",
         email: {
-          required: true,
-          email: true
+          required: "Заполните это поле",
+          email: "Введите правильно email"
         },
-        password: {
-          required: true,
-          minlength: 6
-        }
-        // phone: validatePhone
+        area: "Заполните это поле"
       }
     });
   }
