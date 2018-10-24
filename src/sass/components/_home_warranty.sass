@@ -94,6 +94,51 @@
     &__left
       width: 100%
       flex-wrap: wrap
+      justify-content: center
+    &__image
+      width: 30%
+      text-align: center
+      margin: 0
+      img
+        max-width: 178px
+        width: 100%
+    &__info
+      width: 50%
+      padding-left: 40px
+    &__right
+      width: 100%
+      margin-top: 42px
+      padding-left: 0
+      p
+        line-height: 1.75
+        margin-bottom: 24px
+        letter-spacing: 0.4px
+    &__info-title
+      margin: 33px 0 0
+    ul
+      margin: 0
+      p
+        margin: 10px 0 0 0
+    .btn
+      margin-top: 9px
+      padding: 9px
+      line-height: 1.2
+    &__info-i
+      &:nth-child(1)
+        p.warranty__info-title
+          margin-top: 0
+
++r($mobile)
+  .warranty
+    padding: 36px 0 40px
+    &__title
+      font-size: 20px
+      padding-bottom: 37px
+    &__grid
+      flex-wrap: wrap
+    &__left
+      width: 100%
+      flex-wrap: wrap
     &__image
       width: 100%
       text-align: center
@@ -122,3 +167,7 @@
       margin-top: 9px
       padding: 9px
       line-height: 1.2
+    &__info-i
+      &:nth-child(1)
+        p.warranty__info-title
+          margin-top: 33px

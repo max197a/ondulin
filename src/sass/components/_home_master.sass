@@ -36,7 +36,6 @@
     max-width: 160px
     position: relative
     text-align: center
-    // outline: 1px solid red
     display: flex
     align-items: center
     flex-direction: column
@@ -72,7 +71,6 @@
     margin-left: 60px
     width: 56%
     z-index: 2
-    // outline: 1px solid red
     p
       font-size: 13px
       color: $fontColor
@@ -148,7 +146,6 @@
     padding-top: 48px
     margin-left: 0.5%
     width: 36%
-    // outline: 1px solid red
     p
       font-size: 13px
       color: $fontColor
@@ -207,6 +204,8 @@
       &:hover
         color: #fff
         background: $redColor
+  &__tablet
+    display: none
 
 +r($desktop)
   .master
@@ -243,30 +242,41 @@
 +r($tablet)
   .master
     &__grid
-      flex-direction: column
-      align-items: center
-      justify-content: center
+      align-items: flex-start
+      justify-content: flex-start
+      flex-wrap: wrap
     &__image
       min-width: 100px
       min-height: 100px
-      max-width: 100%
+      width: 30%
+      max-width: 100px
       padding-top: 0
+      p
+        display: none
       img
         max-width: 100%
         width: auto
-        height: 100px
+        // height: 100px
     &__coop
       align-self: flex-start
-      width: 100%
+      width: 81%
     &__info
       width: 100%
-      padding-top: 20px
-      margin-left: 0
+      padding-top: 0px
+      margin-left: 29px
       p
+        &.master__tablet
+          font-size: 11px
+          color: #959595
+          display: inline-block
+          margin-bottom: 10px
         &.master__title
-          text-align: center
+          text-align: left
           line-height: 1.4
           padding-bottom: 5px
+          width: 150%
+          margin-top: -5px
+
     &__row
       margin: 15px 0
       p
@@ -276,9 +286,15 @@
           margin-right: 7px
     &__contacts
       margin-top: 33px
+      width: 43%
+      min-height: 110px
+      display: flex
+      flex-direction: column
       a
         &.master__contacts-link
-          margin-right: 23px
+          margin-right: 0
+          margin-bottom: 15px
+          margin-right: auto
       &.show
         .master__contacts-hidden
           max-width: 100%
@@ -293,10 +309,124 @@
         margin: 0 0 8px 0
     &__services
       margin-left: 0
-      padding-top: 25px
+      padding-top: 0
+      position: absolute
+      width: 46%
+      top: auto
+      left: 54%
+      bottom: 110px
+      transform: translateY(100%)
+      p
+        &.master__title
+          padding-bottom: 0px
+          font-size: 13px
+    &__list
+      p
+        margin: 14px 0
+    &__buttons
+      width: 100%
+      position: static
+      bottom: 0
+      margin-bottom: 0
+      flex-wrap: wrap
+      margin-top: 15px
+      justify-content: space-between
+      .btn
+        margin: 8px 0 12px
+        width: 46%
+    &__item
+      padding-bottom: 29px
+    &__sertificate
+      width: 100%
+      position: static
+      left: 0
+      margin-left: 0
+      margin-top: -155px
+      margin-bottom: 15px
+      p
+        &.master__title
+          position: static
+          font-size: 13px
+          margin-bottom: 14px
+
++r($mobile)
+  .master
+    &__grid
+      flex-direction: column
+      align-items: center
+      justify-content: center
+    &__image
+      min-height: 100px
+      max-width: 100%
+      padding-top: 0
+      width: 100%
+      margin-bottom: 13px
+      p
+        display: inline-block
+      img
+        max-width: 200%
+        width: auto
+        height: 100px
+    &__coop
+      align-self: flex-start
+      width: 100%
+    &__info
+      width: 100%
+      padding-top: 15px
+      margin-left: 0
+      position: relative
+      z-index: 5
+      p
+        &.master__tablet
+          display: none
+        &.master__title
+          text-align: center
+          line-height: 1.4
+          padding-bottom: 5px
+          width: 100%
+    &__row
+      margin: 15px 0
+      p
+        &:nth-child(1)
+          min-width: 100px
+          max-width: 100px
+          margin-right: 7px
+    &__contacts
+      margin-top: 33px
+      min-height: 0
+      max-width: 100%
+      width: 100%
+      a
+        &.master__contacts-link
+          margin-right: 23px
+          margin-right: auto
+      &.show
+        .master__contacts-hidden
+          max-width: 100%
+          max-height: 150px
+    &__contacts-hidden
+      left: 0
+      position: static
+      margin-left: 90px
+      margin-top: -35px
+      max-width: 100%
+      max-height: 0
+      margin-bottom: -32px
+      a
+        margin: 0 0 8px 0
+    &__services
+      margin-left: 0
+      padding-top: 47px
+      position: static
+      top: auto
+      bottom: auto
+      transform: none
+      width: 100%
+      left: 0
       p
         &.master__title
           padding-bottom: 8px
+          font-size: 18px
     &__buttons
       position: static
       bottom: 0
@@ -307,7 +437,16 @@
         margin: 10px auto
         width: 100%
     &__item
-      padding-bottom: 32px
+      padding-bottom: 27px
     &__sertificate
       margin-left: 0
       align-self: flex-start
+      position: static
+      margin: 0 auto 0 0
+      padding: 21px 0 0 
+      p
+        &.master__title
+          padding-bottom: 15px
+          font-size: 18px
+    &__btn-container
+      margin: 25px auto

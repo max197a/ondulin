@@ -55,7 +55,7 @@ body, html
   padding-right: 40px
   // outline: 1px solid red
 
-+r($tablet)
++r($mobile)
   .container
     padding-left: 20px
     padding-right: 20px
@@ -93,18 +93,32 @@ input
     width: 100%
     resize: none
     touch-action: manipulation
+    max-height: 50px
+    overflow: hidden
     &::-webkit-input-placeholder
+      transition: all 0.1s $ease
       color: #959595
       opacity: 0
       transition: inherit
     &:focus::-webkit-input-placeholder
       opacity: 1
     &::-moz-placeholder
+      transition: all 0.1s $ease
       color: #959595
+      opacity: 0
+    &:focus::-moz-placeholder
+      opacity: 1
     &:-ms-input-placeholder
+      transition: all 0.1s $ease
       color: #959595
+      opacity: 0
+    &:hover:-ms-input-placeholder
+      opacity: 1
     &-moz-placeholder
+      transition: all 0.1s $ease
       color: #959595
+      opacity: 0
+    &:hover-moz-placeholder
     &:not(:placeholder-shown),
     &:focus
       padding-top: 22px
@@ -118,9 +132,9 @@ input
     &:not(:placeholder-shown) + label,
     &:focus + label
       transform: translate(0, 0)
-      font-size: 10px
-      top: 9px
-      left: 1px
+      font-size: 9px
+      top: 10px
+      left: 2px
       cursor: pointer
       color: $fontColor
   label
@@ -132,9 +146,9 @@ input
     transition: all $transitionSpeed $ease
     color: #959595
     z-index: 2
-    left: 0
-    top: 50%
-    transform: translate(0, -50%)
+    left: 1px
+    top: 17px
+    // transform: translate(0, -50%)
     &.error
       position: absolute
       top: 80%
@@ -150,6 +164,14 @@ input
     input,
     textarea
       border-color: $redColor
+
++r($tablet)
+  .input-container
+    input,
+    textarea
+      max-height: 100%
+    textarea
+
 
 
 // REMOVE FOR PRODUCTION !
