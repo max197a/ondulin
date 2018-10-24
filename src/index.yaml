@@ -1,5 +1,7 @@
-ProjectTitle: Ondulin
+ProjectTitle: Onduline
 
 PageList:
 - file: homepage.html
   ready: 95
+- file: 404.html
+  ready: 20

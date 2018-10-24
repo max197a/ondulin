@@ -1,0 +1,19 @@
+---
+title: 404 Not Found
+---
+extends shared/_layout
+block header
+block content
+
+  // BEGIN SECTION :: 404
+  section.page404
+    .container
+      img.page404__logo(src="img/logotype.svg", alt="")
+      p.page404__title Страница не найдена
+      p.page404__desc Неправильно набран адрес или такой страницы нет на сайте
+      a.btn Перейти на главную
+      img.page404__image(src="img/404.png", alt="")
+  
+  // END SECTION :: 404
+
+block footer
