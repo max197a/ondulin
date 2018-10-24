@@ -12,9 +12,9 @@
     width: 100%
   &__left
     display: flex
-    align-items: center
+    align-items: flex-start
     justify-content: space-between
-    width: 55%
+    width: 54%
   &__image
     max-width: 289px
     width: 48%
@@ -43,29 +43,40 @@
     text-transform: uppercase
     margin: 27px 0
   ul
-    padding-left: 0
+    padding-left: 0px
     li
       width: 100%
     p
       font-size: 14px
       color: $fontColor
       line-height: 1.2
-      margin: 11px
+      margin: 11px 0
       width: 100%
+      position: relative
+      padding-left: 19px
+      &:before
+        position: absolute
+        left: 0
+        top: 0px
+        content: '—'
+        font-size: 14px
+        color: $fontColor
+        line-height: 1.2
 
 +r($desktop1068)
   .warranty
     &__title
       text-align: center
     &__left
-      width: 55%
+      width: 50%
     &__image
-      width: 45%
-    &__info
-      width: 52%
-      padding-left: 0
-    &__right
       width: 43%
+    &__info
+      width: 57%
+      padding-left: 40px
+    &__right
+      width: 50%
+      padding-left: 30px
       p
         line-height: 1.5
         margin-bottom: 15px
@@ -94,6 +105,7 @@
     &__right
       width: 100%
       margin-top: 42px
+      padding-left: 0
       p
         line-height: 1.75
         margin-bottom: 24px

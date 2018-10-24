@@ -7,7 +7,7 @@
   max-width: 1920px
   padding-top: 105px
   position: relative
-  z-index: 2
+  z-index: 5
   &--fullscreen
     // min-height: 100vh
     display: flex
@@ -59,7 +59,7 @@
       font-size: 36px
       line-height: 1.2
       padding-bottom: 25px
-      width: 48%
+      width: 45%
     p
       color: $fontColor
       margin-top: 25px
@@ -68,7 +68,7 @@
       max-width: 495px
       font-size: 14px
       line-height: 1.75
-      width: 48%
+      width: 45%
   &__search
     background: #d7d7d7
     padding: 30px 0 51px
@@ -98,8 +98,19 @@
     padding-top: 0px
     margin-top: 75px
     &__info
-      padding-top: 3%
+      padding-top: 5%
       padding-bottom: 5%
+      h1
+        max-width: 350px
+        padding-bottom: 10px
+      p
+        padding-left: 30px
+
++r($tablet882)
+  .firstscreen
+    &__info
+      h1
+        font-size: 32px
 
 
 +r($tablet)
