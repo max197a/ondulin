@@ -1,0 +1,112 @@
+.video
+  &__container
+    margin-top: -23px
+  &__choose
+    font-size: 12px
+    padding-left: 20px
+    position: relative
+    display: inline-block
+    color: $redColor
+    span
+      display: inline-block
+      width: 10px
+      height: 1px
+      background: $redColor
+      position: absolute
+      left: 0
+      top: 6px
+      transition: all $transitionSpeed $ease
+      &:before,
+      &:after
+        position: absolute
+        display: block
+        content: ''
+        background: $redColor
+        width: 10px
+        height: 1px
+        left: 0
+        transition: all $transitionSpeed $ease
+      &:before
+        top: -4px
+      &:after
+        top: 4px
+      &:hover
+        color: $lightRed
+        &:before,
+        &:after
+          background: $lightRed
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    margin: 0 -10px
+    width: calc(100% + 20px)
+    flex-wrap: wrap
+    padding-bottom: 90px
+  &__item
+    width: 280px
+    margin: 50px 10px 12px
+    .btn
+      display: none
+      min-width: 180px
+      font-size: 13px
+    &--active
+      .btn.active
+        display: inline-block
+        background: #fff
+        border: 1px solid $redColor
+        color: $redColor
+        &:hover
+          background: $redColor
+          color: #fff
+    &--success
+      .btn.success
+        display: inline-block
+        pointer-events: none
+        border: 1px solid #fce5e9
+        background: #fce5e9
+        color: $redColor
+        padding-left: 28px
+        position: relative
+        &:before
+          position: absolute
+          display: block
+          content: ''
+          width: 13px
+          height: 7px
+          border: 5px solid $redColor
+          transform: rotate(-45deg)
+          border-top: none
+          border-right: none
+          left: 10px
+          top: 10px
+
+
+  &__image
+    max-width: 286px
+    width: 100%
+    img
+      width: 100%
+  &__info
+    min-height: 30px
+    margin-top: 16px
+    margin: 16px 0 18px
+    p
+      font-size: 13px
+      color: $fontColor
+      line-height: 1.2
+  
++r($tablet)
+  .video
+    &__container
+      margin-top: -11px
+    &__grid
+      padding-bottom: 38px
+    &__item
+      margin-top: 27px
+      .btn
+        width: 100%
+        &.success
+          padding-left: 12px
+          &:before
+            left: 50px
