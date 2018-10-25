@@ -401,6 +401,25 @@ $(document).ready(function() {
         area: "Заполните это поле"
       }
     });
+
+    $(".reset__form").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: validateSubmitHandler,
+      rules: {
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        email: {
+          required: "Заполните это поле",
+          email: "Введите правильно email"
+        }
+      }
+    });
   }
 
   //////////

@@ -1,0 +1,25 @@
+---
+title: Onduline reset password
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: nav
+  section.nav
+
+  // END SECTION :: nav
+
+  // BEGIN SECTION :: reset
+  section.reset
+    .container
+      .head(data-aos='fade-down')
+        h1 Восстановление пароля
+        p Введите электронную почту, указанную при регистрации, и мы отправим вам письмо для восстановления пароля
+      .reset__content(data-aos='fade-down')
+        form.reset__form(action="#")
+          .input-container
+            input#f1(type="text" name="email" placeholder="Эл. почта")
+            label(for="f1") Эл. почта
+          input.btn(type="submit" value="Отправить")
+  
+  // END SECTION :: reset

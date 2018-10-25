@@ -1,0 +1,31 @@
+.reset
+  &__form
+    max-width: 635px
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding-top: 14px
+    .input-container
+      width: calc(100% - 200px)
+    .btn
+      min-width: 200px
+      padding: 18px
+      margin-left: -1px
+      position: relative
+      z-index: 2
+  &__content
+    padding-bottom: 100px
+
++r($tablet)
+  .reset
+    &__content
+      padding-bottom: 50px
+    &__form
+      flex-wrap: wrap
+      padding-top: 4px
+      .input-container
+        width: 100%
+      .btn
+        width: 100%
+        margin-top: 19px

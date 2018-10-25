@@ -9,3 +9,5 @@ PageList:
   ready: 20
 - file: Onduline_test-success.html
   ready: 20
+- file: Onduline_pass.html
+  ready: 20
