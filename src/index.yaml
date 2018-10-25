@@ -5,3 +5,5 @@ PageList:
   ready: 95
 - file: 404.html
   ready: 20
+- file: Onduline_test.html
+  ready: 20

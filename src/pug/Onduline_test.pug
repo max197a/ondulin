@@ -1,0 +1,36 @@
+---
+title: Onduline test
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: nav
+  section.nav
+
+  // END SECTION :: nav
+
+  // BEGIN SECTION :: test
+  section.test
+    .container
+      .head
+        h1 Тестирование: Как правильно укладывать черепицу Ондулин на 2-х скатную крышу
+      .test__content
+        p.test__question
+          span С чего необходимо начинать монтаж черепицы Ондулин?
+        p.test__number 1/12
+        form.test__form(action="#")
+          .radio-container
+            input#f1(type="radio" name="radio")
+            label.radio__text(for="f1") с покупки черепицы Ондулин
+          .radio-container
+            input#f2(type="radio" name="radio")
+            label.radio__text(for="f2") с просмотра видео с инструкцией по монтажу
+          .radio-container
+            input#f3(type="radio" name="radio")
+            label.radio__text(for="f3") с договоренностей с Заказчиком
+          .radio-container
+            input#f4(type="radio" name="radio")
+            label.radio__text(for="f4") с доступа к объекту строительства
+          a.btn(href="#") Ответить
+  
+  // END SECTION :: test

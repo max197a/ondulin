@@ -4,7 +4,7 @@
   margin: 0 auto
   position: relative
   &__logo
-    margin-top: 84px
+    margin-top: -21px
     width: 173px
     height: auto
   &__title
@@ -22,15 +22,25 @@
     width: 100%
   &__image
     position: absolute
-    top: -110px
-    right: -220px
-    height: 110vh
-    width: 72%
+    // top: -110px
+    bottom: -150px
+    right: -150px
+    // height: 110vh
+    height: auto
+    width: 70%
+    max-width: 1250px
+    min-width: 600px
+
++r($desktop1068)
+  .page404
+    &__image
+      width: 80%
+
 
 +r($tablet)
   .page404
     &__logo
-      margin-top: 32px
+      margin-top: -18px
       position: relative
       z-index: 2
     &__title
@@ -41,6 +51,7 @@
     &__desc
       position: relative
       z-index: 2
+      max-width: 265px
     .btn
       margin-top: 52px
       position: relative
@@ -50,15 +61,14 @@
       width: 120%
       max-width: 600px
       right: -100px
-      top: 100px
+      top: 50px
+      bottom: auto
+      min-width: 0
     
 +r($mobile)
   .page404
     &__image
-      height: auto !important
-      width: 120%
-      max-width: 600px
       right: auto
       left: 50%
-      top: 230px
+      top: 150px
       transform: translateX(-50%)

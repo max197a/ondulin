@@ -41,6 +41,8 @@ body, html
 
   max-width: 1920px
   margin: 0 auto
+
+  padding-top: 105px
   &__content
     // used for sticky footer (flexbox way)
     flex: 1 0 auto
@@ -48,6 +50,14 @@ body, html
     flex-direction: column
     // header offset ex
     // padding-top: 100px
+
++r($desktop1068)
+  .page
+    padding-top: 75px
+
++r($tablet)
+  .page
+    padding-top: 50px
 
 .container
   max-width: 1280px
@@ -167,6 +177,82 @@ input
     input,
     textarea
       border-color: $redColor
+
+.radio-container
+  position: relative
+  padding-left: 30px
+  input
+    position: absolute
+    width: 0
+    height: 0
+    left: 0
+    top: 0
+    opacity: 0
+    z-index: -9999
+    &:checked + .radio__text
+      &:after
+        opacity: 1
+  label
+    font-size: 14px
+    color: $fontColor
+    position: relative
+    cursor: pointer
+    &:before
+      content: ''
+      position: absolute
+      top: 0px
+      left: -31px
+      width: 19px
+      height: 19px
+      display: block
+      border: 1px solid #333
+      border-radius: 50%
+    &:after
+      display: block
+      position: absolute
+      content: ''
+      width: 11px
+      height: 11px
+      background: $redColor
+      border-radius: 50%
+      left: -26px
+      top: 5px
+      opacity: 0
+      transition: all $transitionSpeed $ease
+
+.nav
+  background: rgba(0,0,0,0.2)
+  width: 100%
+  height: 58px
+
++r($tablet)
+  .nav
+    display: none
+    
+
+.head
+  h1
+    font-size: 36px
+    font-weight: 600
+    line-height: 1.25
+    margin: 39px 0
+    color: $fontColor
+  p
+    font-size: 18px
+    color: $fontColor
+    margin-bottom: 25px
+    span
+      font-weight: 600
+
++r($tablet)
+  .head
+    h1
+      font-size: 23px
+      margin: 24px 0 31px
+      line-height: 1.3
+    p
+      font-size: 186px
+      margin-bottom: 20px
 
 +r($tablet)
   .input-container
