@@ -1,4 +1,6 @@
 .test
+  &__content
+    padding-bottom: 100px
   &__question
     font-size: 18px
     color: $fontColor
@@ -15,18 +17,62 @@
     padding: 18px 10px
   &__form
     padding-top: 8px
-    padding-bottom: 100px
     .radio-container
       margin: 16px 0
+  &__success
+    margin-bottom: 33px
+    font-size: 14px
+    span
+      font-weight: 600
+      font-size: 18px
+  &__info
+    margin-bottom: 16px
+  &__link
+    display: inline-block
+    margin-top: 29px
+    padding-left: 15px
+    position: relative
+    font-size: 14px
+    color: $redColor
+    transition: all $transitionSpeed $ease
+    span
+      color: redColor
+      border-bottom: 1px solid transparent
+      transition: all $transitionSpeed $ease
+    &:after
+      display: block
+      position: absolute
+      width: 5px
+      height: 5px
+      content: ''
+      left: 0px
+      top: 5px
+      border: 1px solid $redColor
+      border-right: none
+      border-bottom: none
+      transform: rotate(-45deg)
+      transition: all $transitionSpeed $ease
+    &:hover
+      span
+        border-color: $lightRed
+  
 
 +r($tablet)
   .test
+    &__content
+      padding-bottom: 50px
     &__question
       font-size: 16px
       margin-bottom: 20px
     &__form
-      padding-bottom: 50px
       .radio-container
         margin: 15px 0
     .btn
+      margin-top: 17px
+    &__success
+      margin-bottom: 20px
+    &__info
+      line-height: 1.5
+      margin-bottom: 24px
+    &__link
       margin-top: 17px

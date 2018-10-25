@@ -7,3 +7,5 @@ PageList:
   ready: 20
 - file: Onduline_test.html
   ready: 20
+- file: Onduline_test-success.html
+  ready: 20
