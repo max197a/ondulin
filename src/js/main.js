@@ -420,6 +420,33 @@ $(document).ready(function() {
         }
       }
     });
+
+    $(".js-data").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: validateSubmitHandler,
+      rules: {
+        name: "required",
+        surname: "required",
+        thirdname: "required",
+        date: "required",
+        phone: "required",
+        email: {
+          required: true
+        }
+      },
+      messages: {
+        phone: "Заполните это поле",
+        name: "Заполните это поле",
+        surname: "Заполните это поле",
+        thirdname: "Заполните это поле",
+        date: "Заполните это поле",
+        email: {
+          required: "Заполните это поле"
+        }
+      }
+    });
   }
 
   //////////

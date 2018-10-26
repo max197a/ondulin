@@ -15,3 +15,5 @@ PageList:
   ready: 20
 - file: Onduline_confid.html
   ready: 20
+- file: Onduline_mydata.html
+  ready: 20

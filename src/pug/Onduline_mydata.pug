@@ -1,0 +1,85 @@
+---
+title: Onduline my data
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: nav
+  section.nav
+
+  // END SECTION :: nav
+
+  // BEGIN SECTION :: data
+  section.data
+    .container
+      form.js-data(action="#")
+        .data__grid
+          .data__item
+            .data__head
+              h2 Мои данные
+            .input-container
+              input#f1(type="text" name="surname" placeholder="Фамилия")
+              label(for="f1") Фамилия
+            .input-container
+              input#f2(type="text" name="name" placeholder="Имя")
+              label(for="f2") Имя
+            .input-container
+              input#f3(type="text" name="thirdname" placeholder="Отчество")
+              label(for="f3") Отчество
+            .input-container
+              input#f4(type="text" name="email" placeholder="Электронная почта")
+              label(for="f4") Электронная почта
+            .input-container
+              input#f5(type="text" name="phone" placeholder="Телефон")
+              label(for="f5") Телефон
+            .input-container
+              input#f6(type="text" name="date" placeholder="Дата рождения")
+              label(for="f6") Дата рождения
+            .input-container
+              select#f7 
+                option(value="val2-1" selected disabled) Тип подрядчика
+                option(value="val2-2") Тип #1
+                option(value="val2-3") Тип #2
+              //- label(for="f7") Тип подрядчика
+          .data__item
+            .data__head
+              h2 
+                span Оказываемые  
+                | услуги
+            .checkbox-container
+              input#f9(type="checkbox" name="radio")
+              label.radio__text(for="f9") Кровля под ключ (материалы + работа)
+            .checkbox-container
+              input#f10(type="checkbox" name="radio")
+              label.radio__text(for="f10") Кровля (только работа)
+            .checkbox-container
+              input#f11(type="checkbox" name="radio")
+              label.radio__text(for="f11") Строительные работы
+            .checkbox-container
+              input#f12(type="checkbox" name="radio")
+              label.radio__text(for="f12") Электромонтаж
+            .checkbox-container
+              input#f13(type="checkbox" name="radio")
+              label.radio__text(for="f13") Инженерные системы
+            .checkbox-container
+              input#f14(type="checkbox" name="radio")
+              label.radio__text(for="f14") Отделка
+            .checkbox-container
+              input#f15(type="checkbox" name="radio")
+              label.radio__text(for="f15") Малярные работы
+            .data__pass
+              .input-container
+                input#21(type="text" name="pass" placeholder="Новый пароль")
+                label(for="21") Новый пароль
+              .data__grid
+                .input-container
+                  input#22(type="text" name="confirmpass" placeholder="Подтверждение пароля")
+                  label(for="22") Подтверждение пароля
+                a.btn(href="#") Изменить пароль
+
+        .data__submit
+          input.btn(type="submit", value="Сохранить")
+          
+      
+  
+  // END SECTION :: data
