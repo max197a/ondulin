@@ -1,0 +1,110 @@
+.myobject
+  padding-bottom: 64px
+  &__grid
+    display: flex
+    margin: 0 -10px
+    width: calc(100% + 20px)
+    flex-wrap: wrap
+  &__item
+    font-size: 0
+    max-width: 285px
+    margin: 3px 10px 37px
+    &:last-child
+      margin-right: auto
+  &__link
+    display: flex
+    width: 285px
+    height: 285px
+    border: 1px solid #d7d7d7
+    transition: all $transitionSpeed $ease
+    align-items: center
+    justify-content: center
+    span
+      font-size: 100px
+      color: $redColor
+      line-height: 1
+      font-weight: 600
+      margin-top: -8px
+    &:hover
+      border-color: $redColor
+      background: rgba($redColor, 0.08)
+  &__image
+    width: 285px
+    height: 285px
+    position: relative
+    overflow: hidden
+    img
+      height: 285px
+      width: auto
+  &__info
+    min-height: 34px
+    max-height: 34px
+    overflow: hidden
+    margin-top: 17px
+    margin-bottom: 13px
+    p
+      display: block
+      display: -webkit-box
+      font-size: 13px
+      color: $fontColor
+      line-height: 1.2
+      letter-spacing: 0.3px
+      max-width: 285px
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+      overflow: hidden
+      text-overflow: ellipsis
+  &__buttons
+    display: flex
+    align-items: center
+    justify-content: flex-start
+  .btn
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    background: #fff
+    color: $redColor
+    border: 1px solid $redColor
+    margin-right: 8px
+    padding: 10px 9px
+    overflow: hidden
+    &:last-child
+      margin-right: 0
+    img
+      height: 20px
+      width: 23px
+    span
+      font-size: 0
+      transition: all $transitionSpeed $ease
+      opacity: 0
+    &:hover
+      span
+        font-size: 13px
+        color: $redColor
+        margin-left: 10px
+        opacity: 1
+
++r($tablet)
+  .myobject
+    padding-bottom: 24px
+    &__grid
+      justify-content: center
+    &__item
+      max-width: 280px
+      margin-bottom: 26px
+      &:last-child
+        margin-right: 10px
+    &__image
+      width: 280px
+      height: 280px
+      img
+        height: 280px
+    &__link
+      display: flex
+      width: 280px
+      height: 280px
+    &__info
+      margin-top: 18px
+      margin-bottom: 18px
+      min-height: 0
+      max-height: 100%
