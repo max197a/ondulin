@@ -27,3 +27,5 @@ PageList:
   ready: 20
 - file: Onduline_tab-shop.html
   ready: 20
+- file: Onduline_addobject.html
+  ready: 20

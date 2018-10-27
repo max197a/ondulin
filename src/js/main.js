@@ -32,6 +32,7 @@ $(document).ready(function() {
     initValidations();
     initTeleport();
     initPopups();
+    initFormStyler();
 
     // initMap();
   }
@@ -57,6 +58,12 @@ $(document).ready(function() {
       refreshDebounceWait: 150,
       appendToBody: true
     });
+  }
+
+  function initFormStyler() {
+    setTimeout(function() {
+      $('input[type="file"]').styler();
+    }, 50);
   }
 
   // Prevent # behavior
@@ -474,6 +481,20 @@ $(document).ready(function() {
         index: "Заполните это поле",
         adres: "Заполните это поле",
         phone: "Заполните это поле"
+      }
+    });
+    $(".js-addobj").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: validateSubmitHandler,
+      rules: {
+        name: "required",
+        text: "required"
+      },
+      messages: {
+        name: "Заполните это поле",
+        text: "Заполните это поле"
       }
     });
   }

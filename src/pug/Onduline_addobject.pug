@@ -1,0 +1,67 @@
+---
+title: Onduline add  object
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: nav
+  section.nav
+
+  // END SECTION :: nav
+
+  // BEGIN SECTION :: addobj
+  section.addobj
+    .container
+      .head(data-aos='fade-down')
+        h1 Добавление объекта
+      form.js-addobj(action="#")
+        .addobj__grid
+          .addobj__form
+            .input-container
+              input#f1(type="text" name="name" placeholder="Название")
+              label(for="f1") Название
+            .input-container
+              textarea#f2(name="text" placeholder="Описание")
+              label(for="f2") Описание
+            .desktop-hidden
+              .addobj__head
+                p Прикрепить фотографии
+              .input-container
+                input(type="file", name="")
+              //- .input-container
+              //-   input(type="file", name="")
+              //- .input-container
+              //-   input(type="file", name="")
+              //- .input-container
+              //-   input(type="file", name="")
+              //- .input-container
+              //-   input(type="file", name="")
+            input.btn(type="submit", value="Добавить объект")
+            p После добавления объекта необходимо указать используемые на фотографиях материалы
+          .addobj__files
+            .addobj__head
+              p Прикрепить фотографии
+            .input-container
+              input(type="file", name="")
+            .input-container
+              input(type="file", name="")
+            .input-container
+              input(type="file", name="")
+            .input-container
+              input(type="file", name="")
+            .input-container
+              input(type="file", name="")
+          .addobj__info
+            .addobj__head
+              p Рекомендации по добавлению объектов
+            .addobj__list
+              p Опишите суть выполненных работ
+              p Укажите состав выполненных работы
+              p Укажите срок выполнения работы
+              p Добавьте как минимум 1 фотографию (мы рекомендуем 5-10 фотографий)
+              p После добавления укажите использованные
+              p Материалы на фотографиях
+
+
+  
+  // END SECTION :: addobj
