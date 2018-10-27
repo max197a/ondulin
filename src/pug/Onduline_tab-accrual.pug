@@ -1,0 +1,90 @@
+---
+title: Onduline tab accrual
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: nav
+  section.nav
+
+  // END SECTION :: nav
+
+  // BEGIN SECTION :: accrual
+  section.accrual
+    .container
+      .head(data-aos='fade-down')
+        h1 Начисления и списания
+      .accrual__points(data-aos='fade-down')
+        img(src="img/card.svg", alt="")
+        p Доступно 
+          span для списания: 
+          span.bold 745 баллов
+        a.btn(href="#") Потратить
+      .accrual__item.accrual__item--head(data-aos='fade-up')
+        .accrual__cell.accrual__date
+          p Дата
+        .accrual__cell.accrual__action
+          p Действие
+        .accrual__cell.accrual__pay
+          p Сумма
+        .accrual__cell.accrual__t-points
+          p Баллы
+        .accrual__cell.accrual__status
+          p Статус
+      .accrual__table
+        .accrual__item(data-aos='fade-up')
+          .accrual__cell.accrual__date
+            p 10.09.2018
+          .accrual__cell.accrual__action
+            p Списание: перчатки
+          .accrual__cell.accrual__pay
+            p –
+          .accrual__cell.accrual__t-points
+            p – 200
+          .accrual__cell.accrual__status
+            p В работе
+        .accrual__item(data-aos='fade-up')
+          .accrual__cell.accrual__date
+            p 28.08.2018
+          .accrual__cell.accrual__action
+            p Списание: набор инструментов
+          .accrual__cell.accrual__pay
+            p –
+          .accrual__cell.accrual__t-points
+            p – 500
+          .accrual__cell.accrual__status
+            p Завершено
+        .accrual__item(data-aos='fade-up')
+          .accrual__cell.accrual__date
+            p 27.08.2018
+          .accrual__cell.accrual__action
+            p Покупка товара
+          .accrual__cell.accrual__pay
+            p 124 500 р.
+          .accrual__cell.accrual__t-points
+            p + 1245
+          .accrual__cell.accrual__status
+            p Завершено
+        .accrual__item(data-aos='fade-up')
+          .accrual__cell.accrual__date
+            p 20.08.2018
+          .accrual__cell.accrual__action
+            p Обучение: сертификат Черепица Ондулин
+          .accrual__cell.accrual__pay
+            p –
+          .accrual__cell.accrual__t-points
+            p + 200
+          .accrual__cell.accrual__status
+            p Завершено
+      .accrual__total(data-aos='fade-up')
+        .accrual__cell.accrual__date
+        .accrual__cell.accrual__action
+        .accrual__cell.accrual__pay.accrual__pay--total
+          p Баланс
+        .accrual__cell.accrual__t-points.accrual__t-points--total
+          p 745 баллов
+        .accrual__cell.accrual__status
+
+      
+  
+  // END SECTION :: accrual

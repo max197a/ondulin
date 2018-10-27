@@ -1,0 +1,171 @@
+.accrual
+  padding-bottom: 100px
+  &__points
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    margin-top: -8px
+    img
+      height: 21px
+      width: auto
+      margin-right: 11px
+    p
+      font-size: 14px
+      color: $fontColor
+      span
+        font-weight: 600
+        margin-left: 3px
+        display: none
+        &.bold
+          display: inline-block
+    .btn
+      margin-left: 29px
+      padding: 8px 19px
+  &__table
+    padding: 16px 0
+    border: 1px solid #d7d7d7
+    border-left: none
+    border-right: none
+  &__item
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    padding: 9px 0 10px
+    p
+      line-height: 1.5
+      font-size: 14px
+      color: $fontColor
+    &--head
+      padding: 5px 0
+      margin-top: 40px
+      p
+        color: #959595
+  &__date
+    width: 10%
+    min-width: 95px
+    padding-right: 25px
+  &__action
+    width: 57.5%
+    padding-right: 25px
+  &__pay
+    min-width: 95px
+    width: 13.5%
+    padding-right: 15px
+    margin-right: auto
+    &--total
+      text-align: right
+
+  &__t-points
+    width: 11.5%
+    padding-right: 15px
+    margin-right: auto
+    &--total
+      p
+        white-space: nowrap
+
+  &__status
+    width: 5%
+    min-width: 80px
+  &__total
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 17px 0
+    p
+      font-size: 14px
+      font-weight: 600
+      color: $fontColor
+  &__total-pay
+    text-align: right
+    width: 80%
+    padding-right: 10px
+  &__total-points
+    width: 18.5%
+    text-align: left
+    min-width: 170px
+
+
++r($tablet)
+  .accrual
+    padding-bottom: 47px
+    &__points
+      align-items: flex-start
+      margin-bottom: 13px
+      p
+        padding-top: 0px
+        padding-left: 10px
+        line-height: 1.7
+        min-width: 120px
+        span
+          &.bold
+            display: block
+            margin-left: 0
+      .btn
+        margin-left: 7px
+        margin-top: 9px
+    &__table
+      border: none
+      padding: 0
+    &__item
+      flex-direction: column
+      border-bottom: 1px solid #d7d7d7
+      padding: 0
+      padding-top: 24px
+      padding-bottom: 10px
+      &--head
+        display: none
+      p
+        line-height: 1.3
+    &__cell
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+      margin-bottom: 13px
+      &:before
+        position: static
+        min-width: 82px
+        font-size: 14px
+        font-family: 'Open Sans', sans-serif
+        line-height: 1.5
+        color: #959595
+    &__date
+      width: 100%
+      padding-right: 0
+      &:before
+        content: 'Дата'
+    &__action
+      width: 100%
+      padding-right: 0
+      &:before
+        content: 'Действие'
+    &__pay
+      width: 100%
+      padding-right: 0
+      &:before
+        content: 'Сумма'
+    &__t-points
+      width: 100%
+      padding-right: 0
+      &:before
+        content: 'Баллы'
+    &__status
+      width: 100%
+      display: flex
+      &:before
+        content: 'Статус'
+    &__total
+      padding-top: 19px
+      padding-bottom: 0
+      .accrual__cell
+        &:before
+          display: none
+      .accrual__date,
+      .accrual__action,
+      .accrual__status
+        display: none
+      .accrual__pay
+        min-width: 82px
+        width: auto
+        margin-bottom: 0
+      .accrual__t-points
+        margin-bottom: 0
