@@ -451,6 +451,31 @@ $(document).ready(function() {
         }
       }
     });
+
+    $(".js-shop").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: validateSubmitHandler,
+      rules: {
+        name: "required",
+        surname: "required",
+        thirdname: "required",
+        city: "required",
+        index: "required",
+        adres: "required",
+        phone: validatePhone
+      },
+      messages: {
+        name: "Заполните это поле",
+        surname: "Заполните это поле",
+        thirdname: "Заполните это поле",
+        city: "Заполните это поле",
+        index: "Заполните это поле",
+        adres: "Заполните это поле",
+        phone: "Заполните это поле"
+      }
+    });
   }
 
   //////////

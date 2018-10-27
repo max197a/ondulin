@@ -77,6 +77,11 @@ input
   -moz-appearance: none
   -webkit-appearance: none
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0
+
 .btn
   font-size: 14px
   display: inline-block
@@ -85,6 +90,7 @@ input
   color: #fff
   background: $redColor
   transition: all $transitionSpeed $ease
+  font-family: 'Open Sans', sans-serif
   padding: 13px
   text-decoration: none
   border: none

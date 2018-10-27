@@ -1,0 +1,102 @@
+---
+title: Onduline tab shop
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: nav
+  section.nav
+
+  // END SECTION :: nav
+
+  // BEGIN SECTION :: shop
+  section.shop
+    .container
+      form.js-shop(action="")
+        .head(data-aos='fade-down')
+          h1 Корзина
+        .shop__points(data-aos='fade-down')
+          img(src="img/card.svg", alt="")
+          p Доступно 
+            span для списания: 
+            span.bold 745 баллов
+        .shop__table(data-aos='fade-up')
+          table
+            tr.shop__table-head
+              td
+                p Наименование
+              td
+                p Количество
+              td
+                p Баллы
+              td
+                p Статус
+            // ROW BEFORE CONTENT FOR PADDING 
+            tr.empty-row
+              td(colspan="4")
+            // ROW BEFORE CONTENT FOR PADDING 
+            tr
+              td
+                p Перчатки для монтажных работ
+              td
+                .input-container
+                  input(type="number")
+              td
+                p 200
+              td
+                a(href="#")
+                  span удалить
+                  img(src="img/close.svg", alt="")
+            tr
+              td
+                p Набор инструментов «Монтажник черепицы Ондулин»
+              td
+                .input-container
+                  input(type="number")
+              td
+                p 500
+              td
+                a(href="#")
+                  span удалить
+                  img(src="img/close.svg", alt="")
+            // ROW BEFORE TOTAL-ROW FOR PADDING 
+            tr.empty-row 
+              td(colspan="4")
+            // ROW BEFORE TOTAL-ROW FOR PADDING 
+            tr.total-row
+              td(colspan="2")
+                p Итого:
+              td
+                p 700
+              td
+        .shop__order(data-aos='fade-up')
+          p.shop__title Оформление заказа
+          .shop__grid
+            .shop__item
+              .input-container
+                input#f1(type="text" name="surname" placeholder="Фамилия")
+                label(for="f1") Фамилия
+              .input-container
+                input#f2(type="text" name="name" placeholder="Имя")
+                label(for="f2") Имя
+              .input-container
+                input#f3(type="text" name="thirdname" placeholder="Отчество")
+                label(for="f3") Отчество
+            .shop__item
+              .input-container
+                input#f5(type="text" name="phone" placeholder="Телефон")
+                label(for="f5") Телефон
+              .shop__grid
+                .input-container
+                  input#f6(type="text" name="index" placeholder="Индекс")
+                  label(for="f6") Индекс
+                .input-container
+                  input#f7(type="text" name="city" placeholder="Город")
+                  label(for="f7") Город
+              .input-container
+                input#f8(type="text" name="adres" placeholder="Адрес")
+                label(for="f8") Адрес
+          .shop__button
+            input.btn(type="submit", value="Всё верно, отправить призы")
+  
+  // END SECTION :: shop
