@@ -100,16 +100,20 @@ $(document).ready(function() {
   }
 
   ////////////////////
-  // CHANGE TITLE LOGIN PAGE
+  // CHANGE ORDER BUTTONS
   ////////////////////
-  _document.on("click", "[js-shipper-button]", function() {
-    $(".carrier-title").hide();
-    $(".shipper-title").fadeIn();
-  });
 
-  _document.on("click", "[js-carrier-button]", function() {
-    $(".shipper-title").hide();
-    $(".carrier-title").fadeIn();
+  _document.on("click", "[js-order-btn]", function(e) {
+    e.preventDefault();
+    var $self = $(this),
+      tabIndex = $self.index();
+    $self.siblings().removeClass("is-active");
+    $self.addClass("is-active");
+    $(".order__tab")
+      .removeClass("is-active")
+      .css("display", "none")
+      .eq(tabIndex)
+      .fadeIn();
   });
 
   ////////////////////

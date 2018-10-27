@@ -21,3 +21,5 @@ PageList:
   ready: 20
 - file: Onduline_photo.html
   ready: 20
+- file: Onduline_zakaz.html
+  ready: 20
