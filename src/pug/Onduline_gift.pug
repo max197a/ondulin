@@ -1,0 +1,124 @@
+---
+title: Onduline gift
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: nav
+  section.nav
+
+  // END SECTION :: nav
+
+  // BEGIN SECTION :: gift
+  section.gift
+    .container
+      .head(data-aos='fade-down')
+        h1 Призы
+      .gift__grid
+        .gift__item
+          .gift__image
+            img(src="img/gift-1.png", alt="")
+          .gift__info
+            p Герметик Момент Гермент
+          p.gift__price 100 баллов
+          a.btn(href="#") Добавить в корзину
+        .gift__item
+          .gift__image
+            img(src="img/gift-2.png", alt="")
+          .gift__info
+            p Перчатки для монтажных работ Tegera
+          p.gift__price 200 баллов
+          a.btn(href="#") Добавить в корзину
+        .gift__item
+          .gift__image
+            img(src="img/gift-3.png", alt="")
+          .gift__info
+            p Защитная краска для высотных работ Tikkurila
+          p.gift__price 300 баллов
+          a.btn(href="#") Добавить в корзину
+        .gift__item
+          .gift__image
+            img(src="img/gift-4.png", alt="")
+          .gift__info
+            p Набор инструментов «Монтажник черепицы Ондулин»
+          p.gift__price 400 баллов
+          a.btn(href="#") Добавить в корзину
+        .gift__item
+          .gift__image
+            img(src="img/gift-5.png", alt="")
+          .gift__info
+            p Упаковка черепы Ондулин
+          p.gift__price 500 баллов
+          a.btn(href="#") Добавить в корзину
+        .gift__item
+          .gift__image
+            img(src="img/gift-6.png", alt="")
+          .gift__info
+            p Лазерный уровень BOSCH
+          p.gift__price 121600 баллов
+          a.btn(href="#") Добавить в корзину
+        .gift__item
+          .gift__image
+            img(src="img/gift-7.png", alt="")
+          .gift__info
+            p Упаковка кровельных гвоздей
+          p.gift__price 60 баллов
+          a.btn(href="#") Добавить в корзину
+        .gift__item
+          .gift__image
+            img(src="img/gift-8.png", alt="")
+          .gift__info
+            p Строительные ботинки
+          p.gift__price 700 баллов
+          a.btn(href="#") Добавить в корзину
+        .gift__item
+          .gift__image
+            img(src="img/gift-9.png", alt="")
+          .gift__info
+            p Пояс с инструментами
+          p.gift__price 600 баллов
+          a.btn(href="#") Добавить в корзину
+        .gift__item
+          .gift__image
+            img(src="img/gift-10.png", alt="")
+          .gift__info
+            p Защитные очки
+          p.gift__price 100 баллов
+          a.btn(href="#") Добавить в корзину
+        .gift__item
+          .gift__image
+            img(src="https://i.ytimg.com/vi/X8Z8okhkjv8/hqdefault.jpg", alt="")
+          .gift__info
+            p Попугай, тестовое изображение и текст для показа переноса слов в случае если больше 3 строк в случае если больше 3 строк в случае если больше 3 строк 
+          p.gift__price 100 баллов
+          a.btn(href="#") Добавить в корзину
+  
+  // END SECTION :: gift
+
+  // BEGIN SECTION :: questions
+  .quest
+    .container
+      p.quest__title Остались вопросы? Свяжитесь с нами
+      .quest__grid
+        .quest__form
+          form.js-question(action="#")
+            .input-container
+              textarea#f1(name="text" placeholder="Вопрос")
+              label(for="f1") Вопрос
+            .quest__mobile
+              //- p.quest__ans Ответы на популярные вопросы
+              //- .quest__list
+              //-   a(href="#") Правила начисления баллов за обучение
+              //-   a(href="#") Тестирование: правила, попытки
+              //-   a(href="#") Как потратить баллы
+              //-   a(href="#") Правила сертификации
+              div(data-teleport-target="mobile-questions")
+            input.btn(type="submit" value="Отправить вопрос")
+        .quest__info(js-teleport data-teleport-to="mobile-questions" data-teleport-condition="<768")
+          p.quest__ans Ответы на популярные вопросы
+          .quest__list
+            a(href="homepage.html") Правила начисления баллов за обучение
+            a(href="homepage.html") Тестирование: правила, попытки
+            a(href="homepage.html") Как потратить баллы
+            a(href="homepage.html") Правила сертификации
+  // END SECTION :: questions

@@ -1,0 +1,74 @@
+.gift
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    margin: 0 -10px
+    width: calc(100% + 20px)
+    flex-wrap: wrap
+    margin-top: -20px
+  &__item
+    max-width: 285px
+    width: 100%
+    margin: 20px 10px 37px
+  &__image
+    display: flex
+    align-items: center
+    justify-content: center
+    max-width: 100%
+    min-height: 290px
+    img
+      max-width: 100%
+      height: auto
+      width: auto
+  &__info
+    overflow: hidden
+    min-height: 50px
+    max-height: 50px
+    margin-top: 15px
+    p
+      font-size: 13px
+      color: $fontColor
+      line-height: 1.2
+      -webkit-line-clamp: 3
+      -webkit-box-orient: vertical
+      overflow: hidden
+      text-overflow: ellipsis
+      max-width: 285px
+      display: block
+      display: -webkit-box
+  &__price
+    margin-top: 4px
+    font-size: 18px
+    font-weight: 600
+    color: $fontColor
+  .btn
+    margin-top: 27px
+    background: #fff
+    border: 1px solid $redColor
+    color: $redColor
+    max-width: 187px
+    width: 100%
+    &:hover
+      background: $redColor
+      color: #fff
+
++r($tablet)
+  .gift
+    &__item
+      margin-bottom: 19px
+    &__image
+      max-width: 220px
+      min-height: 200px
+      max-height: 200px
+      img
+        max-height: 200px
+        width: auto
+    &__info
+      margin-top: 14px
+      min-height: 43px
+      max-height: 43px
+      p
+        line-height: 1.15
+    .btn
+      max-width: 100%

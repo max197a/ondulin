@@ -1,0 +1,83 @@
+.quest
+  padding-bottom: 100px
+  &__title
+    font-size: 30px
+    font-weight: 600
+    margin-top: 57px
+  &__grid
+    margin-top: 54px
+    display: flex
+    align-items: flex-start
+    justify-content: space-between 
+    .input-container
+      margin-bottom: 17px
+    textarea
+      min-height: 173px
+  &__form
+    max-width: 599px
+    width: 50%
+    form
+      width: 100%
+    .btn
+      margin: 0 auto
+      width: 100%
+      max-width: 100%
+      background: $redColor
+      color: #fff
+      border: none
+      padding: 18px
+      &:hover
+        background: $lightRed
+  &__info
+    width: 37.5%
+    margin-left: auto
+  &__ans
+    font-size: 18px
+    font-weight: 600
+    margin-bottom: 31px
+  &__list
+    a
+      display: block
+      width: auto
+      font-size: 13px
+      color: $redColor
+      line-height: 1.3
+      letter-spacing: 0.3px
+      position: relative
+      padding-left: 20px
+      margin-bottom: 15px
+      &:before
+        position: absolute
+        left: 0
+        top: 0
+        content: '—'
+        font-size: 13px
+        color: $fontColor
+        line-height: 1.2
+  &__mobile
+    display: none
+
++r($tablet)
+  .quest
+    padding-bottom: 50px
+    &__title
+      font-size: 24px
+      max-width: 260px
+      margin-top: 25px
+      line-height: 1.25
+    &__grid
+      margin-top: 23px
+    &__form
+      width: 100%
+      max-width: 100%
+      .input-container
+        textarea
+          min-height: 115px
+      .btn
+        margin-top: 13px
+    &__info
+      display: none
+    &__mobile
+      display: block
+    &__ans
+      margin-bottom: 24px
