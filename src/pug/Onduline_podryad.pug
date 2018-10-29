@@ -1,0 +1,171 @@
+---
+title: Onduline podryad
+---
+extends shared/_layout
+block content
+
+
+  // BEGIN SECTION :: podryad first
+  section.p-first(data-aos="fade-up")
+    .container
+      h1 Клуб Ондулин — объединение
+        br
+        | профессиональных строителей
+      .p-first__grid
+        .p-first__item
+          .p-first__image
+            img(src="img/podr-1.svg" alt="")
+          .p-first__info
+            p Заказы 
+              br
+              |  на строительство
+        .p-first__item
+          .p-first__image
+            img(src="img/podr-2.svg" alt="")
+          .p-first__info
+            p Бесплатное 
+              br
+              |  обучение
+        .p-first__item
+          .p-first__image
+            img(src="img/podr-3.svg" alt="")
+          .p-first__info
+            p Участие в 
+              br
+              |  рекламных акциях
+        .p-first__item
+          .p-first__image
+            img(src="img/podr-4.svg" alt="")
+          .p-first__info
+            p Призы за прохождение 
+              br
+              |  сертификации
+        .p-first__item
+          .p-first__image
+            img(src="img/podr-5.svg" alt="")
+          .p-first__info
+            p Консультации 
+              br
+              |  от производителя
+        .p-first__item
+          .p-first__image
+            img(src="img/podr-6.svg" alt="")
+          .p-first__info
+            p Удобный личный кабинет 
+              br
+              |  и портфолио на сайте
+
+  // END SECTION :: podryad first
+  // BEGIN SECTION :: how-it-works
+  section.how-it
+    .container
+      p.how-it__title(data-aos="fade-up") Как это работает
+    .how-it__grid
+      .how-it__info(data-aos="fade-right")
+        .how-it__text
+          .how-it__icon
+            img(src="img/p-icon-1.svg", alt="")
+          p Клиенты обращаются с заявками на монтаж продукции Ондулин на сайте 
+            a(href="#")  profi.onduline.ru  
+            | и выбирают подрядчиков.
+      .how-it__image(data-aos="fade-left")
+        .how-it__image-cont
+          img(src="img/p-img-1.jpg", alt="")
+    .how-it__grid.how-it__grid--reverse
+      .how-it__info(data-aos="fade-left")
+        .how-it__text
+          .how-it__icon
+            img(src="img/p-icon-2.svg", alt="")
+          p Чтобы попасть в список подрядчиков, необходимо зарегистрироваться и внести данные в личном кабинете.
+      .how-it__image(data-aos="fade-right")
+        .how-it__image-cont
+          img(src="img/p-img-2.jpg", alt="")
+    .how-it__grid
+      .how-it__info(data-aos="fade-right")
+        .how-it__text
+          .how-it__icon
+            img(src="img/p-icon-3.svg", alt="")
+          p Хотите быть выше в списке?
+          .how-it__list
+            p пройдите бесплатное обучение и успешно сдайте тесты
+            p добавьте больше фотографий реализованных объектов
+      .how-it__image(data-aos="fade-left")
+        .how-it__image-cont
+          img(src="img/p-img-3.jpg", alt="")
+    .how-it__grid.how-it__grid--reverse
+      .how-it__info(data-aos="fade-left")
+        .how-it__text
+          .how-it__icon
+            img(src="img/p-icon-4.svg", alt="")
+          p Получайте заявки с сайта на почту и в личном кабинете — удобно и выгодно!
+      .how-it__image(data-aos="fade-right")
+        .how-it__image-cont
+          img(src="img/p-img-4.jpg", alt="")
+
+  // END SECTION :: how-it-works
+  
+  // BEGIN SECTION :: how-it-works
+  section.club
+    .container
+      .club__title(data-aos="fade-up") Вступайте в клуб Онудилин
+      .club__points
+        .club__info(data-aos="fade-right" data-aos-delay="50")
+          p Заполните 
+            br
+            | форму на сайте
+        .club__image(data-aos="fade-right" data-aos-delay="100")
+          img(src="img/down-arrow.svg", alt="")
+        .club__info(data-aos="fade-right" data-aos-delay="150")
+          p Добавьте фото 
+            br
+            | реализованных объектов
+        .club__image(data-aos="fade-right" data-aos-delay="200")
+          img(src="img/down-arrow.svg", alt="")
+        .club__info(data-aos="fade-right" data-aos-delay="250")
+          p Получайте 
+            br
+            | новые заказы
+        .club__image(data-aos="fade-right" data-aos-delay="300")
+          img(src="img/down-arrow.svg", alt="")
+        .club__info(data-aos="fade-right" data-aos-delay="350")
+          p Пройдите обучение 
+            br
+            | и сертификацию
+        .club__image(data-aos="fade-right" data-aos-delay="400")
+          img(src="img/down-arrow.svg", alt="")
+        .club__info(data-aos="fade-right" data-aos-delay="450")
+          p Получайте ещё 
+            br
+            | больше заказов!
+      .club__form(data-aos="fade-up")
+        form.js-club(action="#")
+          .club__grid
+            .club__item
+              .input-container
+                input#f1(type="text" name="surname" placeholder="Фамилия")
+                label(for="f1") Фамилия
+              .input-container
+                input#f2(type="text" name="name" placeholder="Имя")
+                label(for="f2") Имя
+              .input-container
+                input#f3(type="text" name="thirdname" placeholder="Отчество")
+                label(for="f3") Отчество
+            .club__item
+              .input-container
+                input#f4(type="text" name="email" placeholder="Эл. почта")
+                label(for="f4") Эл. почта
+              .input-container
+                input#f5(type="text" name="birth" placeholder="Дата рождения")
+                label(for="f5") Дата рождения
+              .input-container
+                //- input#f3(type="text" name="thirdname" placeholder="Имя")
+                select(name="type")
+                  option(value="val0" selected disabled) Тип подрядчика:
+                  option(value="val1") Частный специалист
+                  option(value="val1") Строительная компания
+          .club__button
+            input.btn(type="submit", value="Вступить в клуб")
+            p Отправляя форму, я подтверждаю своё
+              br 
+              a(href="#") согласие на обработку персональных данных
+  // END SECTION :: how-it-works

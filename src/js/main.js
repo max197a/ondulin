@@ -468,8 +468,8 @@ $(document).ready(function() {
         name: "required",
         surname: "required",
         thirdname: "required",
-        city: "required",
-        index: "required",
+        email: "required",
+        birth: "required",
         adres: "required",
         phone: validatePhone
       },
@@ -477,12 +477,37 @@ $(document).ready(function() {
         name: "Заполните это поле",
         surname: "Заполните это поле",
         thirdname: "Заполните это поле",
-        city: "Заполните это поле",
+        email: "Заполните это поле",
         index: "Заполните это поле",
         adres: "Заполните это поле",
         phone: "Заполните это поле"
       }
     });
+
+    $(".js-club").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: validateSubmitHandler,
+      rules: {
+        name: "required",
+        surname: "required",
+        thirdname: "required",
+        email: "required",
+        birth: "required",
+        type: "required"
+      },
+      messages: {
+        name: "Заполните это поле",
+        surname: "Заполните это поле",
+        thirdname: "Заполните это поле",
+        email: "Заполните это поле",
+        index: "Заполните это поле",
+        birth: "Заполните это поле",
+        type: "Заполните это поле"
+      }
+    });
+
     $(".js-addobj").validate({
       errorPlacement: validateErrorPlacement,
       highlight: validateHighlight,
