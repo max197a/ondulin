@@ -1,0 +1,133 @@
+---
+title: Onduline learn
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: nav
+  section.nav
+
+  // END SECTION :: nav
+
+  // BEGIN SECTION :: learn
+  section.learn
+    .container
+      .head
+        h1 Обучение
+      .learn__grid
+        .learn__item
+          .learn__image
+            img(src="img/learn-1.png", alt="")
+          .learn__info
+            p.learn__info-title Черепица Ондулин
+            .learn__row
+              p Всего тестов:
+              p 7
+            .learn__row
+              p Сдано успешно:
+              p 3
+            .learn__row
+              p Осталось сдать:
+              p 4
+          a.btn(href="#") Начать обучение
+        .learn__item
+          .learn__image
+            img(src="img/learn-2.png", alt="")
+          .learn__info
+            p.learn__info-title Ондулин SMART
+            .learn__row
+              p Всего тестов:
+              p 10
+            .learn__row
+              p Сдано успешно:
+              p 0
+            .learn__row
+              p Осталось сдать:
+              p 10
+          a.btn(href="#") Начать обучение
+        .learn__item
+          .learn__image
+            img(src="img/learn-3.png", alt="")
+          .learn__info
+            p.learn__info-title Ондувилла
+            .learn__row
+              p Всего тестов:
+              p 4
+            .learn__row
+              p Сдано успешно:
+              p 1
+            .learn__row
+              p Осталось сдать:
+              p 3
+          a.btn(href="#") Начать обучение
+        .learn__item
+          .learn__image
+            img(src="img/learn-4.png", alt="")
+          .learn__info
+            p.learn__info-title Плёнки Ондутис
+            .learn__row
+              p Всего тестов:
+              p 2
+            .learn__row
+              p Сдано успешно:
+              p 2
+            .learn__row
+              a(href="#") Получить сертификат
+          a.btn.ready(href="#") Обучение пройдено
+  // END SECTION :: learn
+
+  // BEGIN SECTION :: get-sert
+  section.get-set
+    .container
+      p.get-set__title Получите сертификат и зарабатывайте больше
+      .get-set__grid
+        .get-set__item
+          p.get-width Для получения сертификата необходимо успешно пройти тестирование по каждому видео с учебными материалами, представленными в разделах выше.
+          p.get-bold Что даёт сертификат?
+          .get-set__list
+            p Приоритет показа в списке подрядчиков
+            p Больше доверия со стороны закачиков
+            p Дополнительные скидки на продукцию Ондулин
+        .get-set__item
+          .get-set__image
+            a(href="http://www.flagmankrov.ru/upload/iblock/222/222b3a0b23eb284d11454f083b03e4b2.jpg" data-effect="mfp-zoom-in" js-popup-image)
+              img(src="img/cert.jpg", alt="")
+        .get-set__item
+          p.get-bold Посмотрите обучающее видео
+          p.get-light Все видео разделены по темам
+          img(src="img/down-arrow.svg", alt="")
+          p.get-bold Пройдите тестирование
+          p.get-light 1 видео = 1 тест
+          img(src="img/down-arrow.svg", alt="")
+          p.get-bold Пройдите тестирование
+          p.get-light 1 видео = 1 тест
+
+  // END SECTION :: get-sert
+
+  // BEGIN SECTION :: questions
+  .quest
+    .container
+      p.quest__title Остались вопросы? Свяжитесь с нами
+      .quest__grid
+        .quest__form
+          form.js-question(action="#")
+            .input-container
+              textarea#f1(name="text" placeholder="Вопрос")
+              label(for="f1") Вопрос
+            .quest__mobile
+              //- p.quest__ans Ответы на популярные вопросы
+              //- .quest__list
+              //-   a(href="#") Правила начисления баллов за обучение
+              //-   a(href="#") Тестирование: правила, попытки
+              //-   a(href="#") Как потратить баллы
+              //-   a(href="#") Правила сертификации
+              div(data-teleport-target="mobile-questions")
+            input.btn(type="submit" value="Отправить вопрос")
+        .quest__info(js-teleport data-teleport-to="mobile-questions" data-teleport-condition="<768")
+          p.quest__ans Ответы на популярные вопросы
+          .quest__list
+            a(href="homepage.html") Правила начисления баллов за обучение
+            a(href="homepage.html") Тестирование: правила, попытки
+            a(href="homepage.html") Как потратить баллы
+            a(href="homepage.html") Правила сертификации
+  // END SECTION :: questions
