@@ -33,6 +33,7 @@ $(document).ready(function() {
     initTeleport();
     initPopups();
     initFormStyler();
+    initSlider();
 
     // initMap();
   }
@@ -202,6 +203,35 @@ $(document).ready(function() {
   //////////
   // SLIDERS
   //////////
+
+  function initSlider() {
+    $("[js-carousel]").slick({
+      autoplay: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      // dots: true,
+      arrow: true,
+      customPaging: function(slider, i) {
+        var thumb = $(slider.$slides[i]).data();
+        return "<a>" + i + "</a>";
+      }
+    });
+
+    //custom function showing current slide
+    var $status = $(".pagingInfo");
+    var $slickElement = $("[js-carousel]");
+
+    $slickElement.on("init reInit afterChange", function(
+      event,
+      slick,
+      currentSlide,
+      nextSlide
+    ) {
+      //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+      var i = (currentSlide ? currentSlide : 0) + 1;
+      $status.text(i + "/" + slick.slideCount);
+    });
+  }
 
   //////////
   // MODALS
@@ -520,6 +550,34 @@ $(document).ready(function() {
       messages: {
         name: "Заполните это поле",
         text: "Заполните это поле"
+      }
+    });
+
+    $(".js-person").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: validateSubmitHandler,
+      rules: {
+        name: "required",
+        phone: validatePhone,
+        email: {
+          required: true,
+          email: true
+        },
+        area: "required",
+        file: "required"
+        // phone: validatePhone
+      },
+      messages: {
+        name: "Заполните это поле",
+        phone: "Заполните это поле",
+        email: {
+          required: "Заполните это поле",
+          email: "Введите правильно email"
+        },
+        area: "Заполните это поле",
+        file: "Заполните это поле"
       }
     });
   }

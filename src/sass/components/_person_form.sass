@@ -1,0 +1,129 @@
+.p-form
+  padding: 75px 0 79px
+  background: #fff
+  &__title
+    text-align: center
+    font-size: 30px
+    line-height: 1.2
+    font-weight: 600
+    color: $fontColor
+  &__grid
+    padding-top: 53px
+    display: flex
+    justify-content: space-between
+    .input-container
+      width: 32.5%
+  .input-container
+    margin-bottom: 18px
+  &__button
+    max-width: 393px
+    margin: 28px auto 0
+    text-align: center
+    .btn
+      width: 100%
+      padding: 19px
+    p
+      font-size: 10px
+      margin-top: 18px
+      letter-spacing: 0.5px
+      a
+        color: $redColor
+        border-bottom: 1px solid transparent
+        transition: all $transitionSpeed $ease
+        &:hover
+          border-color: $redColor
+  .jq-file
+    position: relative
+    display: inline-block
+    overflow: hidden
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    max-width: 100%
+    cursor: pointer
+    &:hover
+      .jq-file__browse
+        background: $redColor
+        color: #fff
+    &.changed
+      .jq-file__name
+        color: $fontColor
+        font-size: 14px
+        &:after
+          display: none
+    input
+      position: absolute
+      top: 0
+      left: 0
+      height: auto
+      margin: 0
+      padding: 0
+      opacity: 0
+      font-size: 0
+      height: 100%
+      cursor: pointer
+  .jq-file__browse
+    font-size: 14px
+    display: inline-block
+    line-height: 1
+    color: $redColor
+    background: #fff
+    transition: all $transitionSpeed $ease
+    font-family: 'Open Sans', sans-serif
+    padding: 17px 19px
+    border: 1px solid $redColor
+    text-decoration: none
+    text-align: center
+    cursor: pointer
+    color: $redColor
+    min-width: 115px
+  .jq-file__name
+    border: 1px solid #d7d7d7
+    font-size: 14px
+    font-family: 'Open Sans', sans-serif
+    padding: 16px 19px
+    // transition: all $transitionSpeed $ease
+    color: #959595
+    width: 100%
+    resize: none
+    touch-action: manipulation
+    max-height: 50px
+    overflow: hidden
+    margin-right: 15px
+    font-size: 0
+    &:after
+      display: inline-block
+      position: static
+      content: 'Файл не выбран (приверепить файл с техническим заданием или проектом)'
+      font-size: 14px
+
++r($tablet)
+  .p-form
+    padding: 43px 0
+    &__title
+      font-size: 20px
+      text-align: center
+      span
+        display: block
+    &__grid
+      flex-wrap: wrap
+    .input-container
+      width: 100%
+      textarea
+        min-height: 90px
+        max-height: 90px
+    .jq-file__name
+      margin-right: -1px
+      &:after
+        content: 'Файл'
+    .jq-file__browse
+      font-size: 0
+      position: relative
+      min-width: 55px
+      max-width: 55px
+      &:after
+        display: inline-block
+        position: static
+        content: '...'
+        font-size: 14px

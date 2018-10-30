@@ -1,0 +1,370 @@
+.person
+  &__breadcrumbs
+    padding-top: 30px
+    a
+      font-size: 12px
+      color: $redColor
+      border-bottom: 1px solid transparent
+      position: relative
+      margin-left: 15px
+      transition: all $transitionSpeed $ease
+      &:after
+        display: block
+        position: absolute
+        width: 5px
+        height: 5px
+        content: ''
+        left: -14px
+        top: 6px
+        border: 1px solid $redColor
+        border-right: none
+        border-bottom: none
+        transform: rotate(-45deg)
+        transition: all $transitionSpeed $ease
+      &:hover
+        border-color: $redColor
+  &__head
+    padding: 30px 0 0 0
+    h1
+      font-size: 36px
+      font-weight: 600
+      color: $fontColor
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    &--about
+      padding: 70px 0 80px
+      .person__right
+        padding-bottom: 38px
+  &__left
+    max-width: 800px
+    width: 100%
+    &--about
+      padding-top: 63px
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+      p
+        margin-top: 0
+    p
+      font-size: 13px
+      color: #636363
+      margin-top: 23px
+      line-height: 1.6
+      &.person__title
+        font-size: 20px
+        font-weight: 600
+        color: $fontColor
+        margin-top: -8px
+        line-height: 1
+    .btn
+      display: none
+  &__carousel
+    border: 1px solid #d7d7d7
+    a
+      font-size: 0
+      padding: 0
+      margin: 0
+  &__right
+    min-width: 288px
+    max-width: 288px
+    width: 100%
+    margin-left: 80px
+    position: relative
+    img
+      width: 100%
+      height: auto
+    .pagingInfo
+      position: absolute
+      bottom: 5px
+      left: 50%
+      transform: translateX(-50%)
+      font-size: 13px
+      color: #363636
+      letter-spacing: 7px
+    .slick-arrow
+      position: absolute
+      bottom: -41px
+      font-size: 0
+      border: none
+      background: none
+      width: 28px
+      height: 28px
+      border: 1px solid #d7d7d7
+      cursor: pointer
+      transition: all $transitionSpeed $ease
+      &:hover
+        border-color: $redColor
+        background: rgba(228, 55, 61, 0.1)
+      &.slick-next
+        right: 60px
+        &:after
+          display: block
+          position: absolute
+          content: ''
+          width: 5px
+          height: 5px
+          border: 2px solid $redColor
+          top: 50%
+          left: 8px
+          transform-origin: center center
+          border-left: none
+          border-top: none
+          transform: translateY(-50%) rotate(-45deg)
+      &.slick-prev
+        left: 60px
+        &:after
+          display: block
+          position: absolute
+          content: ''
+          width: 5px
+          height: 5px
+          border: 2px solid $redColor
+          right: 8px
+          top: 50%
+          transform-origin: center center
+          border-left: none
+          border-top: none
+          transform: translateY(-50%) rotate(135deg)
+  &__service
+    border-radius: 15px
+    background: #f7f7f7
+    min-height: 280px
+  &__service-title
+    font-size: 20px
+    font-weight: 600
+    color: $fontColor
+    padding: 22px 27px
+    border-bottom: 1px solid #fff
+  &__list
+    padding: 28px 27px
+    p
+      font-size: 13px
+      position: relative
+      padding-left: 22px
+      color: $fontColor
+      margin-bottom: 17px
+      &:before
+        position: absolute
+        left: 0
+        top: 0px
+        content: '—'
+        font-size: 13px
+        color: $fontColor
+        line-height: 1.2
+  &__image-container
+    min-height: 219px
+    min-width: 219px
+    max-width: 219px
+    max-height: 219px
+    width: 100%
+    height: 100%
+    border: 1px solid #d7d7d7
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      width: 74%
+      height: auto
+  &__image
+    p
+      margin-top: 10px
+      text-align: center
+      width: 100%
+      color: #959595
+      font-size: 11px
+  &__info
+    margin-left: 70px
+    p
+      &.person__contacts-title
+        font-size: 20px
+        font-weight: 600
+        color: $fontColor
+        margin-top: 35px
+
+  &__row
+    display: flex
+    align-items: flex-start
+    margin-bottom: 16px
+    p
+      margin-top: 0
+      font-size: 14px
+      line-height: 1.3
+    p:nth-child(1)
+      min-width: 150px
+      font-size: 12px
+      color: #7d7d7d
+    a
+      color: $redColor
+      font-size: 14px
+      line-height: 1.3
+      border-bottom: 1px solid transparent
+      transition: all $transitionSpeed $ease
+      &:hover
+        border-color: $redColor
+  &__links
+    display: flex
+    margin-top: 19px
+    align-items: center
+    justify-content: flex-start
+    a
+      font-size: 14px
+      text-decoration: none
+      color: $fontColor
+      transition: all $transitionSpeed $ease
+      margin-right: 5px
+      &:hover
+        color: $redColor
+      &.mail
+        color: $redColor
+        border-bottom: 1px solid transparent
+        &:hover
+          border-color: $redColor
+
++r($desktop)
+  .person
+    &__right
+      min-width: 220px
+      max-width: 220px
+      width: 100%
+      margin-left: 25px
+      position: relative
+      .slick-arrow
+        &.slick-next
+          right: 35px
+        &.slick-prev
+          left: 35px
+    &__service
+      min-height: 200px
+    &__service-title
+      padding: 15px 20px
+    &__list
+      padding: 15px 20px
+    &__image-container
+      min-height: 170px
+      min-width: 170px
+      max-width: 170px
+      max-height: 170px
+    &__info
+      margin-left: 25px
+      p
+        &.person__contacts-title
+          margin-top: 20px
+          margin-bottom: 15px
+          font-size: 18px
+    &__row
+      flex-direction: column
+      margin-bottom: 10px
+      p
+        &:nth-child(2)
+          font-weight: 600
+      a
+        font-weight: 600
+    &__links
+      margin-top: 0
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+      a
+        margin-top: 5px
+    &__grid
+      padding-top: 30px
+      &--about
+        padding-bottom: 40px
+    &__left
+      &--about
+        padding-top: 0
+
++r($tablet)
+  .person
+    &__breadcrumbs
+      padding-top: 15px
+    &__head
+      padding: 15px 0 0 0
+      h1
+        font-size: 24px
+
++r($mobile)
+  .person
+    &__breadcrumbs
+      display: none
+    &__head
+      padding: 26px 0
+    &__grid
+      padding-top: 0
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+      &--about
+        padding-top: 42px
+        .person__right
+          max-width: 210px
+          margin: 50px auto 0
+    &__left
+      width: 100%
+      flex-wrap: wrap
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+      .btn
+        display: block
+        background: #fff
+        border: 1px solid $redColor
+        color: $redColor
+        max-width: 100%
+        width: 100%
+        margin-top: 40px
+        &:hover
+          background: $redColor
+          color: #fff
+    &__image-container
+      min-height: 220px
+      min-width: 220px
+      max-width: 220px
+      max-height: 220px
+    &__image
+      p
+        margin-top: 5px
+    &__info
+      width: 100%
+      margin-left: 0
+      margin-top: 33px
+      p
+        &.person__contacts-title
+          margin-top: 36px
+          font-size: 20px
+          margin-bottom: 0
+    &__row
+      flex-direction: row
+      margin-bottom: 16px
+      p
+        font-size: 14px
+        &:nth-child(1)
+          font-size: 12px
+        &:nth-child(2)
+          font-size: 14px
+          font-weight: 400
+      a
+        font-weight: 400
+    &__links
+      flex-direction: row
+      margin-top: 13px
+    &__right
+      margin-left: 0
+      margin-top: 36px
+      width: calc(100% + 40px)
+      max-width: 100%
+    &__service
+      border-radius: 0
+      margin: 0 -20px
+      width: calc(100% + 40px)
+      min-height: 0
+    &__service-title
+      padding: 25px 20px 1px
+      border-bottom: none
+    &__list
+      padding: 24px 20px
