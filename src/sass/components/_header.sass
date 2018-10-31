@@ -127,15 +127,41 @@
       z-index: 2
       display: flex
       flex-direction: column
-      align-items: center
-      justify-content: center
+      align-items: flex-start
+      justify-content: flex-start
       transition: all $transitionSpeed $ease
+      padding-top: 60px
+      padding-left: 40px
+
       &.is-open
         transform: translateX(100%)
+    &__links
+      width: 100%
     &__menu-link
-      text-align: center
-      margin: 20px 0
+      // text-align: center
+      // margin: 20px 0
+      text-align: left
+      margin: 0
       display: inline-block
       width: 100%
+
+      font-size: 14px
+      margin: 5px 0
+
     &__user
-      margin-top: 20px
+      margin-top: 25px
+      position: relative
+      &:before
+        display: block
+        position: absolute
+        content: ''
+        width: 50px
+        height: 1px
+        background: darken(#f1f1f1, 20)
+        top: -15px
+        left: 0
+
++r($mobile)
+  .header
+    &__menu
+      padding-left: 20px

@@ -2,10 +2,11 @@
 header.header
   .container(data-aos='fade-down')
     .header__wrapper
-      a(href="home.html").header__logo
+      a(href="homepage.html").header__logo
         .header__logo-img
           img(src="img/logotype.svg", alt="")
       .header__menu
+        .header__teleport(data-teleport-target="mobile-nav")
         .header__links
           a.header__menu-link Cайт Ондулин
           a.header__menu-link Интернет-магазин Ондулин
@@ -18,6 +19,5 @@ header.header
       .hamburger.hamburger--spin(js-hamburger)
         .hamburger-box
           .hamburger-inner
-
 
 // HEADER :: END

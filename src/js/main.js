@@ -634,13 +634,15 @@ $(document).ready(function() {
       var deferred = Barba.Utils.deferred();
 
       // store overlay globally to access in fadein
-      this.$overlay = $('<div class="js-transition-overlay"></div>');
+      this.$overlay = $(
+        '<div class="js-transition-overlay"><img src="img/logotype.svg" alt="" /></div>'
+      );
       this.$overlay.insertAfter(".header");
       $("body").addClass("is-transitioning");
 
       TweenLite.fromTo(
         this.$overlay,
-        0.6,
+        0.8,
         {
           x: "0%"
         },
