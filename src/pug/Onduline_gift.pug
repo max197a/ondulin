@@ -107,15 +107,16 @@ block content
               textarea#f1(name="text" placeholder="Вопрос")
               label(for="f1") Вопрос
             .quest__mobile
-              //- p.quest__ans Ответы на популярные вопросы
-              //- .quest__list
-              //-   a(href="#") Правила начисления баллов за обучение
-              //-   a(href="#") Тестирование: правила, попытки
-              //-   a(href="#") Как потратить баллы
-              //-   a(href="#") Правила сертификации
-              div(data-teleport-target="mobile-questions")
+              p.quest__ans Ответы на популярные вопросы
+              .quest__list
+                a(href="homepage.html") Правила начисления баллов за обучение
+                a(href="homepage.html") Тестирование: правила, попытки
+                a(href="homepage.html") Как потратить баллы
+                a(href="homepage.html") Правила сертификации
+              //- div(data-teleport-target="mobile-questions")
             input.btn(type="submit" value="Отправить вопрос")
-        .quest__info(js-teleport data-teleport-to="mobile-questions" data-teleport-condition="<768")
+        //- .quest__info(js-teleport data-teleport-to="mobile-questions" data-teleport-condition="<778")
+        .quest__info
           p.quest__ans Ответы на популярные вопросы
           .quest__list
             a(href="homepage.html") Правила начисления баллов за обучение

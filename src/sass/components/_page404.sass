@@ -21,20 +21,35 @@
     max-width: 224px
     width: 100%
   &__image
+    max-width: 1100px
+    width: 55%
     position: absolute
-    // top: -110px
-    bottom: -150px
-    right: -150px
-    // height: 110vh
+    right: 0
+    top: -110px
     height: auto
-    width: 70%
-    max-width: 1250px
-    min-width: 600px
 
 +r($desktop1068)
   .page404
     &__image
-      width: 80%
+      top: -80px
+    
+  // OLD IMAGE
+  // &__image
+  //   position: absolute
+  //   // top: -110px
+  //   bottom: -150px
+  //   right: -150px
+  //   // height: 110vh
+  //   height: auto
+  //   width: 70%
+  //   max-width: 1250px
+  //   min-width: 600px
+
+// OLD IMAGE
+// +r($desktop1068)
+//   .page404
+//     &__image
+//       width: 80%
 
 
 +r($tablet)
@@ -57,18 +72,37 @@
       position: relative
       z-index: 2
     &__image
-      height: auto !important
-      width: 120%
-      max-width: 600px
-      right: -100px
-      top: 50px
-      bottom: auto
-      min-width: 0
-    
+      top: -50px
+
 +r($mobile)
   .page404
+    &__title
+      max-width: 140px
+      margin-top: 30px
+
+    &__logo
+      width: 140px
+
     &__image
-      right: auto
-      left: 50%
-      top: 150px
-      transform: translateX(-50%)
+      width: 55%
+      min-height: 150px
+
+    // // OLD IMAGE
+    // &__image
+    //   height: auto !important
+    //   width: 120%
+    //   max-width: 600px
+    //   right: -100px
+    //   top: 50px
+    //   bottom: auto
+    //   min-width: 0
+
+
+// OLD IMAGE 
+// +r($mobile)
+//   .page404
+//     &__image
+//       right: auto
+//       left: 50%
+//       top: 150px
+//       transform: translateX(-50%)

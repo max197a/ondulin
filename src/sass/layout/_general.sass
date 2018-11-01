@@ -115,33 +115,45 @@ input[type=number]::-webkit-outer-spin-button
     max-height: 50px
     overflow: hidden
     &::-webkit-input-placeholder
-      transition: all 0.1s $ease
-      color: #959595
       opacity: 0
-      transition: inherit
-    &:focus::-webkit-input-placeholder
-      opacity: 1
     &::-moz-placeholder
-      transition: all 0.1s $ease
-      color: #959595
       opacity: 0
-    &:focus::-moz-placeholder
-      opacity: 1
     &:-ms-input-placeholder
-      transition: all 0.1s $ease
-      color: #959595
       opacity: 0
-    &:hover:-ms-input-placeholder
-      opacity: 1
     &-moz-placeholder
-      transition: all 0.1s $ease
-      color: #959595
       opacity: 0
-    &:hover-moz-placeholder
     &:not(:placeholder-shown),
     &:focus
       padding-top: 22px
       padding-bottom: 10px
+    // &::-webkit-input-placeholder
+    //   transition: all 0.1s $ease
+    //   color: #959595
+    //   opacity: 0
+    //   transition: inherit
+    // &:focus::-webkit-input-placeholder
+    //   opacity: 1
+    // &::-moz-placeholder
+    //   transition: all 0.1s $ease
+    //   color: #959595
+    //   opacity: 0
+    // &:focus::-moz-placeholder
+    //   opacity: 1
+    // &:-ms-input-placeholder
+    //   transition: all 0.1s $ease
+    //   color: #959595
+    //   opacity: 0
+    // &:hover:-ms-input-placeholder
+    //   opacity: 1
+    // &-moz-placeholder
+    //   transition: all 0.1s $ease
+    //   color: #959595
+    //   opacity: 0
+    // &:hover-moz-placeholder
+    // &:not(:placeholder-shown),
+    // &:focus
+    //   padding-top: 22px
+    //   padding-bottom: 10px
     &:placeholder-shown + label
       cursor: text
       position: absolute
@@ -277,9 +289,94 @@ input[type=number]::-webkit-outer-spin-button
   width: 100%
   height: 58px
 
+.hover-link
+  position: relative
+  transition: all $transitionSpeed $ease
+  display: block
+  width: 100%
+  height: 100%
+
+  &:hover
+    &:after,
+    &:before
+      opacity: 1
+
+  &:after
+    display: block
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    background: rgba(255,255,255,0.35)
+    left: 0
+    top: 0
+    z-index: 2
+    transition: all $transitionSpeed $ease
+    opacity: 0
+  &:before
+    display: block
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    background-image: url(../img/zoom-in.svg)
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: 20%
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    z-index: 4
+    transition: all $transitionSpeed $ease
+    opacity: 0
+
+.video-hover-link
+  position: relative
+  transition: all $transitionSpeed $ease
+  display: block
+  width: 100%
+  height: 100%
+
+  &:hover
+    &:after,
+    &:before
+      opacity: 1
+
+  &:after
+    display: block
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    background: rgba(255,255,255,0.35)
+    left: 0
+    top: 0
+    z-index: 2
+    transition: all $transitionSpeed $ease
+    opacity: 0
+  &:before
+    display: block
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    background-image: url(../img/play.svg)
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: 20%
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    z-index: 4
+    transition: all $transitionSpeed $ease
+    opacity: 0
+
+
 +r($tablet)
   .nav
     display: none
+
+
     
 
 .head

@@ -27,6 +27,11 @@
     img
       height: 285px
       width: auto
+      transform-origin: center center
+      transition: all $transitionSpeed $ease
+    &:hover
+      img
+        transform: scale(1.15)
   &__info
     min-height: 34px
     max-height: 34px
@@ -54,7 +59,7 @@
     &__title
       font-size: 24px
     &__grid
-      justify-content: center
+      justify-content: flex-start
     &__item
       max-width: 280px
       // margin-bottom: 26px
