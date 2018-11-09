@@ -26,6 +26,8 @@ $(document).ready(function() {
   function pageReady() {
     // updateMapVars();
 
+    initDraggable();
+
     initMasks();
     initAutogrow();
     initSelectric();
@@ -60,6 +62,130 @@ $(document).ready(function() {
       appendToBody: true
     });
   }
+
+  function initDraggable() {
+    $("[js-draggable]").draggable({
+      snap: ".gridlines",
+      stop: function() {
+        var l =
+          100 *
+            parseFloat(
+              $(this).position().left /
+                parseFloat(
+                  $(this)
+                    .parent()
+                    .width()
+                )
+            ) +
+          "%";
+        var t =
+          100 *
+            parseFloat(
+              $(this).position().top /
+                parseFloat(
+                  $(this)
+                    .parent()
+                    .height()
+                )
+            ) +
+          "%";
+        $(this).css("left", l);
+        $(this).css("top", t);
+      }
+    });
+  }
+
+  ////////////////////
+  // CLICK PINS OBJECT PHOTO
+  ////////////////////
+
+  ////////////////////
+  // ADD PIN cherepitsa
+  ////////////////////
+
+  _document.on("click", "[js-add-cherepitsa]", function() {
+    $(this)
+      .parent()
+      .addClass("delete-pin");
+    $(this)
+      .parents(".photo__item")
+      .addClass("show-cherepitsa");
+  });
+
+  _document.on("click", "[js-remove-cherepitsa]", function() {
+    $(this)
+      .parent()
+      .removeClass("delete-pin");
+    $(this)
+      .parents(".photo__item")
+      .removeClass("show-cherepitsa");
+  });
+
+  ////////////////////
+  // ADD PIN odulin-smart
+  ////////////////////
+
+  _document.on("click", "[js-add-odulin-smart]", function() {
+    $(this)
+      .parent()
+      .addClass("delete-pin");
+    $(this)
+      .parents(".photo__item")
+      .addClass("show-odulin-smart");
+  });
+
+  _document.on("click", "[js-remove-odulin-smart]", function() {
+    $(this)
+      .parent()
+      .removeClass("delete-pin");
+    $(this)
+      .parents(".photo__item")
+      .removeClass("show-odulin-smart");
+  });
+
+  ////////////////////
+  // ADD PIN onduvilla
+  ////////////////////
+
+  _document.on("click", "[js-add-onduvilla]", function() {
+    $(this)
+      .parent()
+      .addClass("delete-pin");
+    $(this)
+      .parents(".photo__item")
+      .addClass("show-onduvilla");
+  });
+
+  _document.on("click", "[js-remove-onduvilla]", function() {
+    $(this)
+      .parent()
+      .removeClass("delete-pin");
+    $(this)
+      .parents(".photo__item")
+      .removeClass("show-onduvilla");
+  });
+
+  ////////////////////
+  // ADD PIN plenki-ondutis
+  ////////////////////
+
+  _document.on("click", "[js-add-plenki-ondutis]", function() {
+    $(this)
+      .parent()
+      .addClass("delete-pin");
+    $(this)
+      .parents(".photo__item")
+      .addClass("show-plenki-ondutis");
+  });
+
+  _document.on("click", "[js-remove-plenki-ondutis]", function() {
+    $(this)
+      .parent()
+      .removeClass("delete-pin");
+    $(this)
+      .parents(".photo__item")
+      .removeClass("show-plenki-ondutis");
+  });
 
   function initFormStyler() {
     setTimeout(function() {

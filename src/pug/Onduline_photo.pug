@@ -20,41 +20,66 @@ block content
         .photo__left
           .photo__image
             img(src="img/photo-1.jpg", alt="")
+            .photo__pin.cherepitsa(js-draggable)
+              p Черепица Ондулин
+            .photo__pin.odulin-smart(js-draggable)
+              p Одулин SMART
+            .photo__pin.onduvilla(js-draggable)
+              p Ондувилла
+            .photo__pin.plenki-ondutis(js-draggable)
+              p Плёнки Ондутис
+              
         .photo__right
           .photo__grid
             .photo__row
               p Черепица Ондулин
-              a(href="#") поставить метку
+              a(href="#" js-add-cherepitsa) поставить метку
+              a(href="#" js-remove-cherepitsa) убрать метку
             .photo__row
               p Одулин SMART
-              a(href="#") поставить метку
+              a(href="#" js-add-odulin-smart) поставить метку
+              a(href="#" js-remove-odulin-smart) убрать метку
             .photo__row
               p Ондувилла
-              a(href="#") поставить метку
+              a(href="#" js-add-onduvilla) поставить метку
+              a(href="#" js-remove-onduvilla) убрать метку
             .photo__row
               p Плёнки Ондутис
-              a(href="#") поставить метку
+              a(href="#" js-add-plenki-ondutis) поставить метку
+              a(href="#" js-remove-plenki-ondutis) убрать метку
             .photo__button
               a.btn(href="#") Сделать фото главным
               a.btn(href="#") Удалить фото
-      .photo__item
+      .photo__item.show-plenki-ondutis.show-onduvilla.show-odulin-smart.show-cherepitsa
         .photo__left
           .photo__image
             img(src="img/photo-2.jpg", alt="")
+            .photo__pin.cherepitsa(js-draggable)
+              p Черепица Ондулин
+            .photo__pin.odulin-smart(js-draggable)
+              p Одулин SMART
+            .photo__pin.onduvilla(js-draggable)
+              p Ондувилла
+            .photo__pin.plenki-ondutis(js-draggable)
+              p Плёнки Ондутис
         .photo__right
           .photo__grid
-            .photo__row
+            .photo__row.delete-pin
               p Черепица Ондулин
-              a(href="#") поставить метку
-            .photo__row
+              a(href="#" js-add-cherepitsa) поставить метку
+              a(href="#" js-remove-cherepitsa) убрать метку
+            .photo__row.delete-pin
               p Одулин SMART
-              a(href="#") поставить метку
-            .photo__row
+              a(href="#" js-add-odulin-smart) поставить метку
+              a(href="#" js-remove-odulin-smart) убрать метку
+            .photo__row.delete-pin
               p Ондувилла
-              a(href="#") поставить метку
-            .photo__row
+              a(href="#" js-add-onduvilla) поставить метку
+              a(href="#" js-remove-onduvilla) убрать метку
+            .photo__row.delete-pin
               p Плёнки Ондутис
-              a(href="#") поставить метку
+              a(href="#" js-add-plenki-ondutis) поставить метку
+              a(href="#" js-remove-plenki-ondutis) убрать метку
             .photo__button
               a.btn(href="#") Сделать фото главным
               a.btn(href="#") Удалить фото
@@ -62,20 +87,32 @@ block content
         .photo__left
           .photo__image
             img(src="img/photo-3.jpg", alt="")
+            .photo__pin.cherepitsa(js-draggable)
+              p Черепица Ондулин
+            .photo__pin.odulin-smart(js-draggable)
+              p Одулин SMART
+            .photo__pin.onduvilla(js-draggable)
+              p Ондувилла
+            .photo__pin.plenki-ondutis(js-draggable)
+              p Плёнки Ондутис
         .photo__right
           .photo__grid
             .photo__row
               p Черепица Ондулин
-              a(href="#") поставить метку
+              a(href="#" js-add-cherepitsa) поставить метку
+              a(href="#" js-remove-cherepitsa) убрать метку
             .photo__row
               p Одулин SMART
-              a(href="#") поставить метку
+              a(href="#" js-add-odulin-smart) поставить метку
+              a(href="#" js-remove-odulin-smart) убрать метку
             .photo__row
               p Ондувилла
-              a(href="#") поставить метку
+              a(href="#" js-add-onduvilla) поставить метку
+              a(href="#" js-remove-onduvilla) убрать метку
             .photo__row
               p Плёнки Ондутис
-              a(href="#") поставить метку
+              a(href="#" js-add-plenki-ondutis) поставить метку
+              a(href="#" js-remove-plenki-ondutis) убрать метку
             .photo__button
               a.btn(href="#") Сделать фото главным
               a.btn(href="#") Удалить фото
@@ -83,20 +120,32 @@ block content
         .photo__left
           .photo__image
             img(src="img/photo-4.jpg", alt="")
+            .photo__pin.cherepitsa(js-draggable)
+              p Черепица Ондулин
+            .photo__pin.odulin-smart(js-draggable)
+              p Одулин SMART
+            .photo__pin.onduvilla(js-draggable)
+              p Ондувилла
+            .photo__pin.plenki-ondutis(js-draggable)
+              p Плёнки Ондутис
         .photo__right
           .photo__grid
             .photo__row
               p Черепица Ондулин
-              a(href="#") поставить метку
+              a(href="#" js-add-cherepitsa) поставить метку
+              a(href="#" js-remove-cherepitsa) убрать метку
             .photo__row
               p Одулин SMART
-              a(href="#") поставить метку
+              a(href="#" js-add-odulin-smart) поставить метку
+              a(href="#" js-remove-odulin-smart) убрать метку
             .photo__row
               p Ондувилла
-              a(href="#") поставить метку
+              a(href="#" js-add-onduvilla) поставить метку
+              a(href="#" js-remove-onduvilla) убрать метку
             .photo__row
               p Плёнки Ондутис
-              a(href="#") поставить метку
+              a(href="#" js-add-plenki-ondutis) поставить метку
+              a(href="#" js-remove-plenki-ondutis) убрать метку
             .photo__button
               a.btn(href="#") Сделать фото главным
               a.btn(href="#") Удалить фото
