@@ -21,3 +21,66 @@
       opacity: 0
     &.mfp-bg
       opacity: 0
+
+.popup
+  max-width: 595px
+  background: #fff
+  padding: 70px 100px
+  margin: 0 auto
+  .mfp-close
+    position: absolute
+    top: 30px
+    right: 30px
+    width: 20px
+    height: 20px
+    transition: all $transitionSpeed $ease
+    cursor: pointer
+    opacity: 1
+    font-size: 0
+    overflow: hidden
+    &:hover
+      transform: scale(1.1)
+    &:before
+      display: block
+      position: absolute
+      content: ''
+      height: 100%
+      width: 4px
+      background: $redColor
+      transform: rotate(-45deg)
+      left: 8px
+      top: 0
+    &:after
+      display: block
+      position: absolute
+      content: ''
+      height: 100%
+      width: 4px
+      background: $redColor
+      transform: rotate(45deg)
+      top: 0
+      right: 8px
+  &__title
+    font-size: 30px
+    font-weight: 600
+    color: $fontColor
+  .input-container
+    margin-top: 15px
+    textarea
+      min-height: 140px
+      max-height: 140px
+      height: 140px
+  .btn
+    margin-top: 15px
+    width: 100%
+    font-size: 14px
+    padding: 18px 10px
+
++r($tablet)
+  .popup
+    padding: 30px 40px
+    .mfp-close
+      right: 15px
+      top: 15px
+    &__title
+      font-size: 24px

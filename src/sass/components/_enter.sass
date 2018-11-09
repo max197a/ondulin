@@ -1,0 +1,112 @@
+.enter
+  position: fixed
+  top: 111px
+  width: 100%
+  height: 100%
+  background: #fff
+  z-index: 5000
+  left: -100%
+  opacity: 0
+  transition: all $transitionSpeed $ease
+  display: flex
+  align-items: center
+  justify-content: center
+  form
+    text-align: right
+  &.is-active
+    left: 0
+    opacity: 1
+  &__title
+    font-size: 30px
+    font-weight: 600
+    color: $fontColor
+    margin-bottom: 35px
+    text-align: left
+  &__buttons
+    margin-top: 38px
+    display: flex
+    justify-content: space-between
+    .btn
+      width: 48%
+      font-size: 16px
+      padding: 17px 10px
+      &--registration
+        padding: 16px 10px
+        border: 1px solid $redColor
+        color: $redColor
+        background: transparent
+        &:hover
+          color: #fff
+          background: $redColor
+  &__reset-pas
+    font-size: 12px
+    color: #000
+    border-bottom: 1px solid #000
+    transition: all $transitionSpeed $ease
+    margin: 25px 0 10px auto
+    display: inline-block
+    &:hover
+      border-color: transparent
+  form
+    max-width: 395px
+    margin: -175px auto 0
+  &__close
+    position: absolute
+    top: 0
+    right: 40px
+    width: 30px
+    height: 30px
+    transition: all $transitionSpeed $ease
+    cursor: pointer
+    &:hover
+      transform: scale(1.2)
+    &:before
+      display: block
+      position: absolute
+      content: ''
+      height: 100%
+      width: 5px
+      background: $redColor
+      transform: rotate(-45deg)
+      left: 12px
+    &:after
+      display: block
+      position: absolute
+      content: ''
+      height: 100%
+      width: 5px
+      background: $redColor
+      transform: rotate(45deg)
+      right: 13px
+  &__close-container
+    position: absolute
+    max-width: 1180px
+    width: 100%
+    margin: 0 auto
+    height: 30px
+    top: 30px
+
++r($desktop1068)
+  .enter
+    top: 85px
+
++r($desktop)
+  .enter
+    top: 76px
+
++r($tablet)
+  .enter
+    align-items: flex-start
+    top: 51px
+    padding-top: 30px
+    form
+      margin-top: 0
+    &__title
+      font-size: 24px
+      margin-bottom: 20px
+    &__reset-pas
+      margin-top: 15px
+    &__buttons
+      margin-top: 20px
+    &__close
+      display: none

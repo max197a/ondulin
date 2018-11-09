@@ -85,12 +85,12 @@ block content
       .container
         .master__grid
           .master__image
-            .master__image-cont
+            a.master__image-cont(href="#")
               img(src="img/master-1.jpg", alt="")
             p Частный специалист
           .master__coop
             .master__info
-              p.master__title Константинопольский Константин К.
+              a.master__title(href="#") Константинопольский Константин К.
               p.master__tablet Частный специалист
               .master__row
                 p Основной регион:
@@ -125,12 +125,12 @@ block content
       .container
         .master__grid
           .master__image
-            .master__image-cont
+            a.master__image-cont(href="#")
               img(src="img/master-2.png", alt="")
             p Строительная компания
           .master__coop
             .master__info
-              p.master__title ООО «СтройСнаб»
+              a.master__title(href="#") ООО «СтройСнаб»
               p.master__tablet Строительная компания
               .master__row
                 p Основной регион:
@@ -167,12 +167,12 @@ block content
       .container
         .master__grid
           .master__image
-            .master__image-cont
+            a.master__image-cont(href="#")
               img(src="img/master-3.jpg", alt="")
             p Строительная бригада
           .master__coop
             .master__info
-              p.master__title Константинопольский Константин К.
+              a.master__title(href="#") Константинопольский Константин К.
               p.master__tablet Строительная бригада
               .master__row
                 p Основной регион:
@@ -208,12 +208,12 @@ block content
       .container
         .master__grid
           .master__image
-            .master__image-cont
+            a.master__image-cont(href="#")
               img(src="img/master-4.jpg", alt="")
             p Частный специалист
           .master__coop
             .master__info
-              p.master__title Антонов Станислав Николаевич
+              a.master__title(href="#") Антонов Станислав Николаевич
               p.master__tablet Частный специалист
               .master__row
                 p Основной регион:
@@ -249,12 +249,12 @@ block content
       .container
         .master__grid
           .master__image
-            .master__image-cont
+            a.master__image-cont(href="#")
               img(src="img/master-5.png", alt="")
             p Строительная компания
           .master__coop
             .master__info
-              p.master__title ООО «СибСтрой»
+              a.master__title(href="#") ООО «СибСтрой»
               p.master__tablet Строительная компания
               .master__row
                 p Основной регион:
@@ -284,7 +284,8 @@ block content
             a.btn(href="#") Отправить заказ
     .container(data-aos='fade-up')
       .master__btn-container
-        a.btn(href="#") Показать ещё 10 подрядчиков
+        a.btn(href="#" js-loading) Показать ещё 10 подрядчиков
+        img(src="img/loading.gif", alt="")
     
 
   div(data-teleport-target="mobile-select")
@@ -308,7 +309,7 @@ block content
       p.warranty__title Сертифицированные подрядчики — гарантия высокого качества сервиса
         .warranty__grid
           .warranty__left
-            a.warranty__image(href="#")
+            .warranty__image
               img(src="img/cert.jpg", alt="")
             .warranty__info
               .warranty__info-i

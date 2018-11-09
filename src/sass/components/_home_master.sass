@@ -78,17 +78,17 @@
       letter-spacing: 0.3px
       &.p-photo
         color: $redColor
+    a
+      font-size: 13px
+      color: $fontColor
+      line-height: 1.3
+      letter-spacing: 0.3px
       &.master__title
         font-size: 18px
         color: $redColor
         position: absolute
         left: 0
         top: 15px
-    a
-      font-size: 13px
-      color: $fontColor
-      line-height: 1.3
-      letter-spacing: 0.3px
   &__row
     display: flex
     align-items: flex-start
@@ -195,15 +195,37 @@
   &__btn-container
     max-width: 419px
     margin: 50px auto 78px
+    position: relative
     .btn
       width: 100%
       border: 1px solid $redColor
       color: $redColor
       background: transparent
-      padding: 14px 
+      padding: 14px
       &:hover
         color: #fff
         background: $redColor
+    img
+      position: absolute
+      left: 50%
+      width: 80px
+      height: 80px
+      top: -20px
+      transform: translateX(-50%)
+      transition: all $transitionSpeed $ease
+      opacity: 0
+      pointer-events: none
+
+
+    &.is-active
+      .btn
+        opacity: 0
+        pointer-events: none
+      img
+        opacity: 1
+        pointer-events: all
+        transition-delay: 0.25s
+
   &__tablet
     display: none
 
@@ -215,7 +237,7 @@
       // margin-left: 50px
       width: 100%
       padding-top: 13px
-      p
+      a
         &.master__title
           position: static
     &__services
@@ -260,7 +282,7 @@
         // height: 100px
     &__coop
       align-self: flex-start
-      width: 81%
+      width: calc(100% - 120px)
     &__info
       width: 100%
       padding-top: 0px
@@ -271,6 +293,7 @@
           color: #959595
           display: inline-block
           margin-bottom: 10px
+      a
         &.master__title
           text-align: left
           line-height: 1.4
@@ -380,6 +403,7 @@
       p
         &.master__tablet
           display: none
+      a
         &.master__title
           text-align: center
           line-height: 1.4

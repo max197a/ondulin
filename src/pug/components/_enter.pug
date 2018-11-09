@@ -1,0 +1,21 @@
+// ENTER :: BEGIN
+section.enter
+  .enter__close-container
+    a.enter__close(href="#" js-enter-close)
+  .container
+    form.js-enter-form(action="#")
+      p.enter__title Вход для подрядчиков
+      .input-container
+        input#e1(type="text" name="name" placeholder="Логин / эл. почта")
+        label(for="e1") Логин / эл. почта 
+          span  *
+      a.enter__reset-pas(href="#") Забыли пароль?
+      .input-container
+        input#e2(type="password" name="pass" placeholder="Пароль")
+        label(for="e2") Пароль 
+          span  *
+      .enter__buttons
+        a.btn.btn--registration(href="#") Регистрация
+        input.btn.btn--enter(type="submit" value="Войти")
+
+// ENTER :: END

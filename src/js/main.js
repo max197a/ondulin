@@ -179,6 +179,35 @@ $(document).ready(function() {
     $("html").toggleClass("is-fixed");
   });
 
+  _document.on("click", ".hamburger.is-active", function() {
+    $(this).removeClass("is-active");
+    $(".header__menu").removeClass("is-open");
+    $("body").removeClass("is-fixed");
+    $("html").removeClass("is-fixed");
+    $(".enter").removeClass("is-active");
+  });
+
+  _document.on("click", "[js-enter-close]", function() {
+    $("body").removeClass("is-fixed");
+    $("html").removeClass("is-fixed");
+    $(".enter").removeClass("is-active");
+  });
+
+  _document.on("click", "[js-enter-btn]", function() {
+    $(".enter").addClass("is-active");
+    $("body").addClass("is-fixed");
+    $("html").addClass("is-fixed");
+  });
+
+  _document.on("click", "[js-loading]", function() {
+    $(this)
+      .parent()
+      .addClass("is-active");
+    setTimeout(function() {
+      $(".master__btn-container").removeClass("is-active");
+    }, 10000);
+  });
+
   // _document.on("click", ".header__menu-link, .header__btn", closeMobileMenu);
 
   // function closeMobileMenu() {
@@ -568,6 +597,21 @@ $(document).ready(function() {
       messages: {
         name: "Заполните это поле",
         text: "Заполните это поле"
+      }
+    });
+
+    $(".js-enter-form").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: validateSubmitHandler,
+      rules: {
+        name: "required",
+        pass: "required"
+      },
+      messages: {
+        name: "Заполните это поле",
+        pass: "Заполните это поле"
       }
     });
 
