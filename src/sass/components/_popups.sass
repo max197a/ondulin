@@ -76,6 +76,229 @@
     font-size: 14px
     padding: 18px 10px
 
+.popup-photo
+  max-width: 1090px
+  padding: 70px 100px
+  margin: 0 auto
+  background: #fff
+  position: relative
+  text-align: center
+  &__title
+    font-size: 18px
+    font-weight: 400
+    color: $fontColor
+    width: calc(100% - 40px)
+    margin-bottom: 30px
+    text-align: left
+  &__item
+    width: 100%
+    margin: 0 -1px
+    overflow: hidden
+    img
+      width: 100%
+      height: auto
+  &__container
+    position: relative
+    .slick-slide
+      margin: 0 1px
+  &__buttons
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 3
+    overflow: hidden
+    .prev
+      position: absolute
+      left: 0
+      top: 0
+      width: 50%
+      max-width: 50%
+      height: 100%
+      display: block
+      cursor: url(../img/popup-btn-left.png), auto
+    .next
+      position: absolute
+      right: 0
+      top: 0
+      width: 50%
+      height: 100%
+      display: block
+      cursor: url(../img/popup-btn.png), auto
+
+  &__carousel
+    padding-bottom: 15px
+    position: relative
+    z-index: 2
+  .pagingInfo
+    display: inline-block
+    margin: 5px auto 0
+    bottom: 5px
+    font-size: 13px
+    color: #363636
+    letter-spacing: 7px
+    text-align: center
+  .slick-arrow
+    position: absolute
+    bottom: -27px
+    font-size: 0
+    border: none
+    background: none
+    width: 28px
+    height: 28px
+    border: 1px solid #d7d7d7
+    cursor: pointer
+    transition: all $transitionSpeed $ease
+    &:hover
+      border-color: $redColor
+      background: rgba(228, 55, 61, 0.1)
+    &.slick-next
+      right: 50%
+      margin-right: -80px
+      &:after
+        display: block
+        position: absolute
+        content: ''
+        width: 5px
+        height: 5px
+        border: 2px solid $redColor
+        top: 50%
+        left: 8px
+        transform-origin: center center
+        border-left: none
+        border-top: none
+        transform: translateY(-50%) rotate(-45deg)
+    &.slick-prev
+      left: 50%
+      margin-left: -80px
+      &:after
+        display: block
+        position: absolute
+        content: ''
+        width: 5px
+        height: 5px
+        border: 2px solid $redColor
+        right: 8px
+        top: 50%
+        transform-origin: center center
+        border-left: none
+        border-top: none
+        transform: translateY(-50%) rotate(135deg)
+  .mfp-close
+    position: absolute
+    top: 70px
+    right: 100px
+    width: 20px
+    height: 20px
+    transition: all $transitionSpeed $ease
+    cursor: pointer
+    opacity: 1
+    font-size: 0
+    overflow: hidden
+    &:hover
+      transform: scale(1.1)
+    &:before
+      display: block
+      position: absolute
+      content: ''
+      height: 100%
+      width: 4px
+      background: $redColor
+      transform: rotate(-45deg)
+      left: 8px
+      top: 0
+    &:after
+      display: block
+      position: absolute
+      content: ''
+      height: 100%
+      width: 4px
+      background: $redColor
+      transform: rotate(45deg)
+      top: 0
+      right: 8px
+  &__image
+    position: relative
+    .photo__pin
+      opacity: 1
+  &__pin
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    background: $redColor
+    position: relative
+    position: absolute
+    left: 0px
+    top: 0px
+    z-index: 4
+    cursor: pointer
+    opacity: 1
+    transition: opacity $transitionSpeed $ease
+    &:nth-of-type(2)
+      left: 18%
+      top: 39%
+    &:nth-of-type(3)
+      left: 45%
+      top: 30%
+    &:nth-of-type(4)
+      left: 58%
+      top: 50%
+    &:nth-of-type(5)
+      left: 75%
+      top: 24%
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      width: 14px
+      height: 14px
+      background: #fff
+      left: 50%
+      top: 50%
+      border-radius: 50%
+      transform: translate(-50%, -50%)
+    &:hover,
+    &:focus
+      a
+        opacity: 1
+    a
+      position: absolute
+      font-size: 12px
+      width: auto
+      display: inline-block
+      top: 95%
+      left: 50%
+      transform: translateX(-50%)
+      padding: 5px
+      background: #fff
+      border: 1px solid #d7d7d7
+      line-height: 1.4
+      text-align: center
+      opacity: 0
+      transition: all $transitionSpeed $ease
+      &:hover
+        span
+          border-bottom: 1px solid #000
+      &:before
+        display: block
+        position: absolute
+        content: ''
+        background: #fff
+        border: 1px solid #d7d7d7
+        width: 6px
+        height: 6px
+        left: 50%
+        top: -4px
+        transform: translateX(-50%) rotate(-45deg)
+        border-left: none
+        border-bottom: none
+  &__info
+    font-size: 13px
+    color: #636363
+    line-height: 1.4
+    font-weight: 400
+    margin-top: 30px
+    text-align: left
+
 +r($tablet)
   .popup
     padding: 30px 40px
@@ -84,3 +307,8 @@
       top: 15px
     &__title
       font-size: 24px
+  .popup-photo
+    padding: 30px 40px
+    .mfp-close
+      right: 40px
+      top: 30px

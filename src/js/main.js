@@ -36,6 +36,7 @@ $(document).ready(function() {
     initPopups();
     initFormStyler();
     initSlider();
+    initSliderPopup();
 
     // initMap();
   }
@@ -325,6 +326,14 @@ $(document).ready(function() {
     $("html").addClass("is-fixed");
   });
 
+  _document.on("click", "[js-next-slide]", function() {
+    $("button.slick-next").click();
+  });
+
+  _document.on("click", "[js-prev-slide]", function() {
+    $("button.slick-prev").click();
+  });
+
   _document.on("click", "[js-loading]", function() {
     $(this)
       .parent()
@@ -375,6 +384,35 @@ $(document).ready(function() {
     //custom function showing current slide
     var $status = $(".pagingInfo");
     var $slickElement = $("[js-carousel]");
+
+    $slickElement.on("init reInit afterChange", function(
+      event,
+      slick,
+      currentSlide,
+      nextSlide
+    ) {
+      //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+      var i = (currentSlide ? currentSlide : 0) + 1;
+      $status.text(i + "/" + slick.slideCount);
+    });
+  }
+
+  function initSliderPopup() {
+    $("[js-carousel-popup]").slick({
+      autoplay: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      // dots: true,
+      arrow: true,
+      customPaging: function(slider, i) {
+        var thumb = $(slider.$slides[i]).data();
+        return "<a>" + i + "</a>";
+      }
+    });
+
+    //custom function showing current slide
+    var $status = $(".pagingInfo");
+    var $slickElement = $("[js-carousel-popup]");
 
     $slickElement.on("init reInit afterChange", function(
       event,
@@ -488,6 +526,21 @@ $(document).ready(function() {
         }
       },
       midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+    });
+
+    $("[js-popup-gallery]").each(function() {
+      $(this).magnificPopup({
+        gallery: true,
+        removalDelay: 500, //delay removal by X to allow out-animation
+        callbacks: {
+          beforeOpen: function() {
+            // $("[js-carousel-popup]").slick("refresh");
+            $(window).trigger("resize");
+            this.st.mainClass = this.st.el.attr("data-effect");
+          }
+        },
+        midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+      });
     });
 
     $("[js-popup-video]").magnificPopup({
