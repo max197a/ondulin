@@ -12,12 +12,13 @@
       label(for="ch2") Описание
     input.btn(type="submit" value="Сохранить")
 
-.popup__gallery
-  #popup1.popup-photo.mfp-with-anim.mfp-hide
-    .object1
-      .popup-photo__title Монтаж крыши 120 м²
-      .popup-photo__container
-        .popup-photo__carousel(js-carousel-popup)
+//- .popup__gallery
+#popup1.popup-photo.mfp-with-anim.mfp-hide
+  .popup-photo__title Монтаж крыши 120 м²
+  .popup-photo__container
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide
           .popup-photo__item
             .popup-photo__image
               .popup-photo__buttons
@@ -36,6 +37,7 @@
               .popup-photo__pin
                 a(href="#")
                   span Плёнки Ондутис
+        .swiper-slide
           .popup-photo__item
             .popup-photo__image
               .popup-photo__buttons
@@ -54,6 +56,7 @@
               .popup-photo__pin
                 a(href="#")
                   span Плёнки Ондутис
+        .swiper-slide
           .popup-photo__item
             .popup-photo__image
               .popup-photo__buttons
@@ -72,6 +75,7 @@
               .popup-photo__pin
                 a(href="#")
                   span Плёнки Ондутис
+        .swiper-slide
           .popup-photo__item
             .popup-photo__image
               .popup-photo__buttons
@@ -90,148 +94,96 @@
               .popup-photo__pin
                 a(href="#")
                   span Плёнки Ондутис
-      .pagingInfo 1/4
-      p.popup-photo__info ООО «Стройснаб» основано в 1994 году. С первых дней работы фирмы основным видом деятельности является обеспечение строительными и отделочными материалами организации и жителей города Новгорода и области. На сегодняшний день мы являемся одним из крупнейших предприятий в Новгородской области в сфере поставок строительных материалов.
+        .swiper-slide
+          .popup-photo__item
+            .popup-photo__image
+              .popup-photo__buttons
+                a.prev(href="#" js-prev-slide)
+                a.next(href="#" js-next-slide)
+              img(src="img/popup-image-5.jpg", alt="")
+              .popup-photo__pin
+                a(href="#")
+                  span Черепица Ондулин
+              .popup-photo__pin
+                a(href="#")
+                  span Одулин SMART
+              .popup-photo__pin
+                a(href="#")
+                  span Ондувилла
+              .popup-photo__pin
+                a(href="#")
+                  span Плёнки Ондутис
+        .swiper-slide
+          .popup-photo__item
+            .popup-photo__image
+              .popup-photo__buttons
+                a.prev(href="#" js-prev-slide)
+                a.next(href="#" js-next-slide)
+              img(src="img/popup-image-6.jpg", alt="")
+              .popup-photo__pin
+                a(href="#")
+                  span Черепица Ондулин
+              .popup-photo__pin
+                a(href="#")
+                  span Одулин SMART
+              .popup-photo__pin
+                a(href="#")
+                  span Ондувилла
+              .popup-photo__pin
+                a(href="#")
+                  span Плёнки Ондутис
+        .swiper-slide
+          .popup-photo__item
+            .popup-photo__image
+              .popup-photo__buttons
+                a.prev(href="#" js-prev-slide)
+                a.next(href="#" js-next-slide)
+              img(src="img/popup-image-7.jpg", alt="")
+              .popup-photo__pin
+                a(href="#")
+                  span Черепица Ондулин
+              .popup-photo__pin
+                a(href="#")
+                  span Одулин SMART
+              .popup-photo__pin
+                a(href="#")
+                  span Ондувилла
+              .popup-photo__pin
+                a(href="#")
+                  span Плёнки Ондутис
+        .swiper-slide
+          .popup-photo__item
+            .popup-photo__image
+              .popup-photo__buttons
+                a.prev(href="#" js-prev-slide)
+                a.next(href="#" js-next-slide)
+              img(src="img/popup-image-8.jpg", alt="")
+              .popup-photo__pin
+                a(href="#")
+                  span Черепица Ондулин
+              .popup-photo__pin
+                a(href="#")
+                  span Одулин SMART
+              .popup-photo__pin
+                a(href="#")
+                  span Ондувилла
+              .popup-photo__pin
+                a(href="#")
+                  span Плёнки Ондутис
+      // Add Pagination
+      .swiper-pagination
+      // Add Arrows
+      .swiper-button-next
+      .swiper-button-prev
 
-  #popup2.popup-photo.mfp-with-anim.mfp-hide(name="group1")
-    .object2
-      .popup-photo__title Строительство загородного дома
-      .popup-photo__container
-        .popup-photo__carousel(js-carousel-popup)
-          .popup-photo__item
-            .popup-photo__image
-              .popup-photo__buttons
-                a.prev(href="#" js-prev-slide)
-                a.next(href="#" js-next-slide)
-              img(src="img/popup-image-2.jpg", alt="")
-              .popup-photo__pin
-                a(href="#")
-                  span Черепица Ондулин
-              .popup-photo__pin
-                a(href="#")
-                  span Одулин SMART
-              .popup-photo__pin
-                a(href="#")
-                  span Ондувилла
-              .popup-photo__pin
-                a(href="#")
-                  span Плёнки Ондутис
-          .popup-photo__item
-            .popup-photo__image
-              .popup-photo__buttons
-                a.prev(href="#" js-prev-slide)
-                a.next(href="#" js-next-slide)
-              img(src="img/popup-image-1.jpg", alt="")
-              .popup-photo__pin
-                a(href="#")
-                  span Черепица Ондулин
-              .popup-photo__pin
-                a(href="#")
-                  span Одулин SMART
-              .popup-photo__pin
-                a(href="#")
-                  span Ондувилла
-              .popup-photo__pin
-                a(href="#")
-                  span Плёнки Ондутис
-          .popup-photo__item
-            .popup-photo__image
-              .popup-photo__buttons
-                a.prev(href="#" js-prev-slide)
-                a.next(href="#" js-next-slide)
-              img(src="img/popup-image-3.jpg", alt="")
-              .popup-photo__pin
-                a(href="#")
-                  span Черепица Ондулин
-              .popup-photo__pin
-                a(href="#")
-                  span Одулин SMART
-              .popup-photo__pin
-                a(href="#")
-                  span Ондувилла
-              .popup-photo__pin
-                a(href="#")
-                  span Плёнки Ондутис
-          .popup-photo__item
-            .popup-photo__image
-              .popup-photo__buttons
-                a.prev(href="#" js-prev-slide)
-                a.next(href="#" js-next-slide)
-              img(src="img/popup-image-4.jpg", alt="")
-              .popup-photo__pin
-                a(href="#")
-                  span Черепица Ондулин
-              .popup-photo__pin
-                a(href="#")
-                  span Одулин SMART
-              .popup-photo__pin
-                a(href="#")
-                  span Ондувилла
-              .popup-photo__pin
-                a(href="#")
-                  span Плёнки Ондутис
-      .pagingInfo 1/4
-      p.popup-photo__info ООО «Стройснаб» основано в 1994 году. С первых дней работы фирмы основным видом деятельности является обеспечение строительными и отделочными материалами организации и жителей города Новгорода и области. На сегодняшний день мы являемся одним из крупнейших предприятий в Новгородской области в сфере поставок строительных материалов.
+  p.popup-photo__info ООО «Стройснаб» основано в 1994 году. С первых дней работы фирмы основным видом деятельности является обеспечение строительными и отделочными материалами организации и жителей города Новгорода и области. На сегодняшний день мы являемся одним из крупнейших предприятий в Новгородской области в сфере поставок строительных материалов.
 
-  #popup3.popup-photo.mfp-with-anim.mfp-hide
-    .object1
-      .popup-photo__title Проектирование кровли в деревянном доме
-      .popup-photo__container
-        .popup-photo__carousel(js-carousel-popup)
-          .popup-photo__item
-            .popup-photo__image
-              .popup-photo__buttons
-                a.prev(href="#" js-prev-slide)
-                a.next(href="#" js-next-slide)
-              img(src="img/popup-image-1.jpg", alt="")
-              .popup-photo__pin
-                a(href="#")
-                  span Черепица Ондулин
-              .popup-photo__pin
-                a(href="#")
-                  span Одулин SMART
-              .popup-photo__pin
-                a(href="#")
-                  span Ондувилла
-              .popup-photo__pin
-                a(href="#")
-                  span Плёнки Ондутис
-          .popup-photo__item
-            .popup-photo__image
-              .popup-photo__buttons
-                a.prev(href="#" js-prev-slide)
-                a.next(href="#" js-next-slide)
-              img(src="img/popup-image-2.jpg", alt="")
-              .popup-photo__pin
-                a(href="#")
-                  span Черепица Ондулин
-              .popup-photo__pin
-                a(href="#")
-                  span Одулин SMART
-              .popup-photo__pin
-                a(href="#")
-                  span Ондувилла
-              .popup-photo__pin
-                a(href="#")
-                  span Плёнки Ондутис
-          .popup-photo__item
-            .popup-photo__image
-              .popup-photo__buttons
-                a.prev(href="#" js-prev-slide)
-                a.next(href="#" js-next-slide)
-              img(src="img/popup-image-3.jpg", alt="")
-              .popup-photo__pin
-                a(href="#")
-                  span Черепица Ондулин
-              .popup-photo__pin
-                a(href="#")
-                  span Одулин SMART
-              .popup-photo__pin
-                a(href="#")
-                  span Ондувилла
-              .popup-photo__pin
-                a(href="#")
-                  span Плёнки Ондутис
+#popup2.popup-photo.mfp-with-anim.mfp-hide
+  .popup-photo__title Строительство загородного дома 2
+  .popup-photo__container
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide
           .popup-photo__item
             .popup-photo__image
               .popup-photo__buttons
@@ -250,14 +202,95 @@
               .popup-photo__pin
                 a(href="#")
                   span Плёнки Ондутис
-      .pagingInfo 1/4
-      p.popup-photo__info ООО «Стройснаб» основано в 1994 году. С первых дней работы фирмы основным видом деятельности является обеспечение строительными и отделочными материалами организации и жителей города Новгорода и области. На сегодняшний день мы являемся одним из крупнейших предприятий в Новгородской области в сфере поставок строительных материалов.
+        .swiper-slide
+          .popup-photo__item
+            .popup-photo__image
+              .popup-photo__buttons
+                a.prev(href="#" js-prev-slide)
+                a.next(href="#" js-next-slide)
+              img(src="img/popup-image-5.jpg", alt="")
+              .popup-photo__pin
+                a(href="#")
+                  span Черепица Ондулин
+              .popup-photo__pin
+                a(href="#")
+                  span Одулин SMART
+              .popup-photo__pin
+                a(href="#")
+                  span Ондувилла
+              .popup-photo__pin
+                a(href="#")
+                  span Плёнки Ондутис
+        .swiper-slide
+          .popup-photo__item
+            .popup-photo__image
+              .popup-photo__buttons
+                a.prev(href="#" js-prev-slide)
+                a.next(href="#" js-next-slide)
+              img(src="img/popup-image-6.jpg", alt="")
+              .popup-photo__pin
+                a(href="#")
+                  span Черепица Ондулин
+              .popup-photo__pin
+                a(href="#")
+                  span Одулин SMART
+              .popup-photo__pin
+                a(href="#")
+                  span Ондувилла
+              .popup-photo__pin
+                a(href="#")
+                  span Плёнки Ондутис
+        .swiper-slide
+          .popup-photo__item
+            .popup-photo__image
+              .popup-photo__buttons
+                a.prev(href="#" js-prev-slide)
+                a.next(href="#" js-next-slide)
+              img(src="img/popup-image-7.jpg", alt="")
+              .popup-photo__pin
+                a(href="#")
+                  span Черепица Ондулин
+              .popup-photo__pin
+                a(href="#")
+                  span Одулин SMART
+              .popup-photo__pin
+                a(href="#")
+                  span Ондувилла
+              .popup-photo__pin
+                a(href="#")
+                  span Плёнки Ондутис
+        .swiper-slide
+          .popup-photo__item
+            .popup-photo__image
+              .popup-photo__buttons
+                a.prev(href="#" js-prev-slide)
+                a.next(href="#" js-next-slide)
+              img(src="img/popup-image-8.jpg", alt="")
+              .popup-photo__pin
+                a(href="#")
+                  span Черепица Ондулин
+              .popup-photo__pin
+                a(href="#")
+                  span Одулин SMART
+              .popup-photo__pin
+                a(href="#")
+                  span Ондувилла
+              .popup-photo__pin
+                a(href="#")
+                  span Плёнки Ондутис
+      // Add Pagination
+      .swiper-pagination
+      // Add Arrows
+      .swiper-button-next
+      .swiper-button-prev
+  p.popup-photo__info ООО «Стройснаб» основано в 1994 году. С первых дней работы фирмы основным видом деятельности является обеспечение строительными и отделочными материалами организации и жителей города Новгорода и области. На сегодняшний день мы являемся одним из крупнейших предприятий в Новгородской области в сфере поставок строительных материалов.
 
-  #popup4.popup-photo.mfp-with-anim.mfp-hide(name="group1")
-    .object2
-      .popup-photo__title Ремонтные работы
-      .popup-photo__container
-        .popup-photo__carousel(js-carousel-popup)
+#popup3.popup-photo.mfp-with-anim.mfp-hide
+  .popup-photo__title Проектирование кровли в деревянном доме 3
+  .popup-photo__container
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide
           .popup-photo__item
             .popup-photo__image
               .popup-photo__buttons
@@ -276,6 +309,26 @@
               .popup-photo__pin
                 a(href="#")
                   span Плёнки Ондутис
+        .swiper-slide
+          .popup-photo__item
+            .popup-photo__image
+              .popup-photo__buttons
+                a.prev(href="#" js-prev-slide)
+                a.next(href="#" js-next-slide)
+              img(src="img/popup-image-8.jpg", alt="")
+              .popup-photo__pin
+                a(href="#")
+                  span Черепица Ондулин
+              .popup-photo__pin
+                a(href="#")
+                  span Одулин SMART
+              .popup-photo__pin
+                a(href="#")
+                  span Ондувилла
+              .popup-photo__pin
+                a(href="#")
+                  span Плёнки Ондутис
+        .swiper-slide
           .popup-photo__item
             .popup-photo__image
               .popup-photo__buttons
@@ -294,6 +347,26 @@
               .popup-photo__pin
                 a(href="#")
                   span Плёнки Ондутис
+        .swiper-slide
+          .popup-photo__item
+            .popup-photo__image
+              .popup-photo__buttons
+                a.prev(href="#" js-prev-slide)
+                a.next(href="#" js-next-slide)
+              img(src="img/popup-image-7.jpg", alt="")
+              .popup-photo__pin
+                a(href="#")
+                  span Черепица Ондулин
+              .popup-photo__pin
+                a(href="#")
+                  span Одулин SMART
+              .popup-photo__pin
+                a(href="#")
+                  span Ондувилла
+              .popup-photo__pin
+                a(href="#")
+                  span Плёнки Ондутис
+        .swiper-slide
           .popup-photo__item
             .popup-photo__image
               .popup-photo__buttons
@@ -312,12 +385,13 @@
               .popup-photo__pin
                 a(href="#")
                   span Плёнки Ондутис
+        .swiper-slide
           .popup-photo__item
             .popup-photo__image
               .popup-photo__buttons
                 a.prev(href="#" js-prev-slide)
                 a.next(href="#" js-next-slide)
-              img(src="img/popup-image-4.jpg", alt="")
+              img(src="img/popup-image-6.jpg", alt="")
               .popup-photo__pin
                 a(href="#")
                   span Черепица Ондулин
@@ -330,5 +404,97 @@
               .popup-photo__pin
                 a(href="#")
                   span Плёнки Ондутис
-      .pagingInfo 1/4
-      p.popup-photo__info ООО «Стройснаб» основано в 1994 году. С первых дней работы фирмы основным видом деятельности является обеспечение строительными и отделочными материалами организации и жителей города Новгорода и области. На сегодняшний день мы являемся одним из крупнейших предприятий в Новгородской области в сфере поставок строительных материалов.
+      // Add Pagination
+      .swiper-pagination
+      // Add Arrows
+      .swiper-button-next
+      .swiper-button-prev
+  p.popup-photo__info ООО «Стройснаб» основано в 1994 году. С первых дней работы фирмы основным видом деятельности является обеспечение строительными и отделочными материалами организации и жителей города Новгорода и области. На сегодняшний день мы являемся одним из крупнейших предприятий в Новгородской области в сфере поставок строительных материалов.
+
+#popup4.popup-photo.mfp-with-anim.mfp-hide(name="group1")
+  .popup-photo__title Ремонтные работы
+  .popup-photo__container
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          .popup-photo__item
+            .popup-photo__image
+              .popup-photo__buttons
+                a.prev(href="#" js-prev-slide)
+                a.next(href="#" js-next-slide)
+              img(src="img/popup-image-2.jpg", alt="")
+              .popup-photo__pin
+                a(href="#")
+                  span Черепица Ондулин
+              .popup-photo__pin
+                a(href="#")
+                  span Одулин SMART
+              .popup-photo__pin
+                a(href="#")
+                  span Ондувилла
+              .popup-photo__pin
+                a(href="#")
+                  span Плёнки Ондутис
+        .swiper-slide
+          .popup-photo__item
+            .popup-photo__image
+              .popup-photo__buttons
+                a.prev(href="#" js-prev-slide)
+                a.next(href="#" js-next-slide)
+              img(src="img/popup-image-8.jpg", alt="")
+              .popup-photo__pin
+                a(href="#")
+                  span Черепица Ондулин
+              .popup-photo__pin
+                a(href="#")
+                  span Одулин SMART
+              .popup-photo__pin
+                a(href="#")
+                  span Ондувилла
+              .popup-photo__pin
+                a(href="#")
+                  span Плёнки Ондутис
+        .swiper-slide
+          .popup-photo__item
+            .popup-photo__image
+              .popup-photo__buttons
+                a.prev(href="#" js-prev-slide)
+                a.next(href="#" js-next-slide)
+              img(src="img/popup-image-2.jpg", alt="")
+              .popup-photo__pin
+                a(href="#")
+                  span Черепица Ондулин
+              .popup-photo__pin
+                a(href="#")
+                  span Одулин SMART
+              .popup-photo__pin
+                a(href="#")
+                  span Ондувилла
+              .popup-photo__pin
+                a(href="#")
+                  span Плёнки Ондутис
+        .swiper-slide
+          .popup-photo__item
+            .popup-photo__image
+              .popup-photo__buttons
+                a.prev(href="#" js-prev-slide)
+                a.next(href="#" js-next-slide)
+              img(src="img/popup-image-6.jpg", alt="")
+              .popup-photo__pin
+                a(href="#")
+                  span Черепица Ондулин
+              .popup-photo__pin
+                a(href="#")
+                  span Одулин SMART
+              .popup-photo__pin
+                a(href="#")
+                  span Ондувилла
+              .popup-photo__pin
+                a(href="#")
+                  span Плёнки Ондутис
+      // Add Pagination
+      .swiper-pagination
+      // Add Arrows
+      .swiper-button-next
+      .swiper-button-prev
+  p.popup-photo__info ООО «Стройснаб» основано в 1994 году. С первых дней работы фирмы основным видом деятельности является обеспечение строительными и отделочными материалами организации и жителей города Новгорода и области. На сегодняшний день мы являемся одним из крупнейших предприятий в Новгородской области в сфере поставок строительных материалов.

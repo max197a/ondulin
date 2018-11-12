@@ -327,11 +327,13 @@ $(document).ready(function() {
   });
 
   _document.on("click", "[js-next-slide]", function() {
-    $("button.slick-next").click();
+    // $("button.slick-next").click();
+    $(".swiper-button-next").click();
   });
 
   _document.on("click", "[js-prev-slide]", function() {
-    $("button.slick-prev").click();
+    // $("button.slick-prev").click();
+    $(".swiper-button-prev").click();
   });
 
   _document.on("click", "[js-loading]", function() {
@@ -398,32 +400,43 @@ $(document).ready(function() {
   }
 
   function initSliderPopup() {
-    $("[js-carousel-popup]").slick({
-      autoplay: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      // dots: true,
-      arrow: true,
-      customPaging: function(slider, i) {
-        var thumb = $(slider.$slides[i]).data();
-        return "<a>" + i + "</a>";
-      }
-    });
-
-    //custom function showing current slide
-    var $status = $(".pagingInfo");
-    var $slickElement = $("[js-carousel-popup]");
-
-    $slickElement.on("init reInit afterChange", function(
-      event,
-      slick,
-      currentSlide,
-      nextSlide
-    ) {
-      //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-      var i = (currentSlide ? currentSlide : 0) + 1;
-      $status.text(i + "/" + slick.slideCount);
-    });
+    // $("[js-carousel-popup]").slick({
+    //   autoplay: false,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    //   // dots: true,
+    //   arrow: true,
+    //   customPaging: function(slider, i) {
+    //     var thumb = $(slider.$slides[i]).data();
+    //     return "<a>" + i + "</a>";
+    //   }
+    // });
+    // //custom function showing current slide
+    // var $status = $(".pagingInfoPopup");
+    // var $slickElement = $("[js-carousel-popup]");
+    // $slickElement.on("init reInit afterChange", function(
+    //   event,
+    //   slick,
+    //   currentSlide,
+    //   nextSlide
+    // ) {
+    //   //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+    //   var i = (currentSlide ? currentSlide : 0) + 1;
+    //   $status.text(i + "/" + slick.slideCount);
+    // });
+    // var swiper = new Swiper(".swiper-container", {
+    //   // autoResize: false,
+    //   // resizeReInit: true,
+    //   observer: true,
+    //   pagination: {
+    //     el: ".swiper-pagination",
+    //     type: "fraction"
+    //   },
+    //   navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev"
+    //   }
+    // });
   }
 
   //////////
@@ -533,9 +546,27 @@ $(document).ready(function() {
         gallery: true,
         removalDelay: 500, //delay removal by X to allow out-animation
         callbacks: {
+          open: function() {
+            var swiper = new Swiper(".swiper-container", {
+              slidesPerView: 1,
+              loop: true,
+              observer: true,
+              pagination: {
+                el: ".swiper-pagination",
+                type: "fraction"
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+              }
+            });
+          },
+          // afterClose: function() {
+          //   var swiper = new Swiper(".swiper-container", {});
+          //   swiper.destroy(false, true);
+          //   // console.log("SWIPER OFF");
+          // },
           beforeOpen: function() {
-            // $("[js-carousel-popup]").slick("refresh");
-            $(window).trigger("resize");
             this.st.mainClass = this.st.el.attr("data-effect");
           }
         },
