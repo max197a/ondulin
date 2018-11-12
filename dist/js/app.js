@@ -329,11 +329,13 @@ $(document).ready(function() {
   _document.on("click", "[js-next-slide]", function() {
     // $("button.slick-next").click();
     $(".swiper-button-next").click();
+    $(window).trigger("resize");
   });
 
   _document.on("click", "[js-prev-slide]", function() {
     // $("button.slick-prev").click();
     $(".swiper-button-prev").click();
+    $(window).trigger("resize");
   });
 
   _document.on("click", "[js-loading]", function() {

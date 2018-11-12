@@ -4738,7 +4738,7 @@ input[type=number]::-webkit-outer-spin-button {
   max-width: 50%;
   height: 100%;
   display: block;
-  cursor: url(../img/popup-btn-left.png), auto;
+  cursor: url(../img/popup-btn-left.png), auto !important;
 }
 
 .popup-photo__buttons .next {
@@ -4746,9 +4746,10 @@ input[type=number]::-webkit-outer-spin-button {
   right: 0;
   top: 0;
   width: 50%;
+  max-width: 50%;
   height: 100%;
   display: block;
-  cursor: url(../img/popup-btn.png), auto;
+  cursor: url(../img/popup-btn.png), auto !important;
 }
 
 .popup-photo__carousel {
