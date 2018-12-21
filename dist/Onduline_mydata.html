@@ -101,16 +101,20 @@
                       <h2>Мои данные</h2>
                     </div>
                     <div class="input-container">
-                      <input id="f1" type="text" name="surname" placeholder="Фамилия">
-                      <label for="f1">Фамилия</label>
-                    </div>
-                    <div class="input-container">
                       <input id="f2" type="text" name="name" placeholder="Имя">
                       <label for="f2">Имя</label>
                     </div>
                     <div class="input-container">
+                      <input id="f1" type="text" name="surname" placeholder="Фамилия">
+                      <label for="f1">Фамилия</label>
+                    </div>
+                    <div class="input-container">
                       <input id="f3" type="text" name="thirdname" placeholder="Отчество">
                       <label for="f3">Отчество</label>
+                    </div>
+                    <div class="input-container">
+                      <input id="f6" type="text" name="date" placeholder="Дата рождения">
+                      <label for="f6">Дата рождения</label>
                     </div>
                     <div class="input-container">
                       <input id="f4" type="text" name="email" placeholder="Электронная почта">
@@ -121,8 +125,8 @@
                       <label for="f5">Телефон</label>
                     </div>
                     <div class="input-container">
-                      <input id="f6" type="text" name="date" placeholder="Дата рождения">
-                      <label for="f6">Дата рождения</label>
+                      <input id="f51" type="text" name="company" placeholder="Компания">
+                      <label for="f51">Компания</label>
                     </div>
                     <div class="input-container">
                       <select id="f7"> 
@@ -131,55 +135,90 @@
                         <option value="val2-3">Тип #2</option>
                       </select>
                     </div>
+                    <div class="input-container">
+                      <input id="f52" type="text" name="naspunkt" placeholder="Населённый пункт">
+                      <label for="f52">Населённый пункт</label>
+                    </div>
+                    <div class="input-container">
+                      <input id="f53" type="text" name="distance" placeholder="Возможность выезда, км">
+                      <label for="f53">Возможность выезда, км</label>
+                    </div>
+                  </div>
+                  <div class="data__item data__item--photo">
+                    <div class="data__user">
+                      <div class="data__image"><img src="img/user.png" alt=""></div><a class="data__user-button" href="#">Добавить</a>
+                      <p>Нажмите кнопку «Добавить» и выберите фотографию / лого с компьютера. Выберите оптимальное расположение и нажмите кнопку «Сохранить» внизу страницы.</p>
+                    </div>
                   </div>
                   <div class="data__item">
-                    <div class="data__head">
-                      <h2> <span>Оказываемые  </span>услуги</h2>
-                    </div>
-                    <div class="checkbox-container">
-                      <input id="f9" type="checkbox" name="radio">
-                      <label class="radio__text" for="f9">Кровля под ключ (материалы + работа)</label>
-                    </div>
-                    <div class="checkbox-container">
-                      <input id="f10" type="checkbox" name="radio">
-                      <label class="radio__text" for="f10">Кровля (только работа)</label>
-                    </div>
-                    <div class="checkbox-container">
-                      <input id="f11" type="checkbox" name="radio">
-                      <label class="radio__text" for="f11">Строительные работы</label>
-                    </div>
-                    <div class="checkbox-container">
-                      <input id="f12" type="checkbox" name="radio">
-                      <label class="radio__text" for="f12">Электромонтаж</label>
-                    </div>
-                    <div class="checkbox-container">
-                      <input id="f13" type="checkbox" name="radio">
-                      <label class="radio__text" for="f13">Инженерные системы</label>
-                    </div>
-                    <div class="checkbox-container">
-                      <input id="f14" type="checkbox" name="radio">
-                      <label class="radio__text" for="f14">Отделка</label>
-                    </div>
-                    <div class="checkbox-container">
-                      <input id="f15" type="checkbox" name="radio">
-                      <label class="radio__text" for="f15">Малярные работы</label>
-                    </div>
-                    <div class="data__pass">
-                      <div class="input-container">
-                        <input id="21" type="text" name="pass" placeholder="Новый пароль">
-                        <label for="21">Новый пароль</label>
+                    <div class="data__item-part">
+                      <div class="data__head">
+                        <h2 class="editable"><span>Оказываемые  </span>услуги</h2>
                       </div>
-                      <div class="data__grid">
-                        <div class="input-container">
-                          <input id="22" type="text" name="confirmpass" placeholder="Подтверждение пароля">
-                          <label for="22">Подтверждение пароля</label>
-                        </div><a class="btn" href="#">Изменить пароль</a>
+                      <div class="checkbox-container">
+                        <input id="f9" type="checkbox" name="radio">
+                        <label class="radio__text" for="f9">Кровля под ключ (материалы + работа)</label>
+                      </div>
+                      <div class="checkbox-container">
+                        <input id="f10" type="checkbox" name="radio">
+                        <label class="radio__text" for="f10">Кровля (только работа)</label>
+                      </div>
+                      <div class="checkbox-container">
+                        <input id="f11" type="checkbox" name="radio">
+                        <label class="radio__text" for="f11">Строительные работы</label>
+                      </div>
+                      <div class="checkbox-container">
+                        <input id="f12" type="checkbox" name="radio">
+                        <label class="radio__text" for="f12">Электромонтаж</label>
+                      </div>
+                      <div class="checkbox-container">
+                        <input id="f13" type="checkbox" name="radio">
+                        <label class="radio__text" for="f13">Инженерные системы</label>
+                      </div>
+                      <div class="checkbox-container">
+                        <input id="f14" type="checkbox" name="radio">
+                        <label class="radio__text" for="f14">Отделка</label>
+                      </div>
+                      <div class="checkbox-container">
+                        <input id="f15" type="checkbox" name="radio">
+                        <label class="radio__text" for="f15">Малярные работы</label>
+                      </div>
+                    </div>
+                    <div class="data__item-part">
+                      <div class="data__head">
+                        <h2 class="editable">Описание услуги</h2>
+                      </div>
+                      <div class="input-container">
+                        <textarea id="f16" name="text" placeholder="Текст описания"></textarea>
+                        <label for="f16">Текст описания</label>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="data__submit">
                   <input class="btn" type="submit" value="Сохранить">
+                </div>
+              </form>
+              <form action="#">
+                <div class="data__password">
+                  <h2>Изменение пароля</h2>
+                </div>
+                <div class="data__pass-grid">
+                  <div class="data__pass-item">
+                    <div class="input-container">
+                      <input id="21" type="text" name="pass" placeholder="Новый пароль">
+                      <label for="21">Новый пароль</label>
+                    </div>
+                  </div>
+                  <div class="data__pass-item">
+                    <div class="data__pass-grid-buttons">
+                      <div class="input-container">
+                        <input id="22" type="text" name="confirmpass" placeholder="Подтверждение пароля">
+                        <label for="22">Подтверждение пароля</label>
+                      </div>
+                      <input class="btn" type="submit" value="Изменить пароль">
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
