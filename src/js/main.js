@@ -553,6 +553,11 @@ $(document).ready(function() {
               slidesPerView: 1,
               loop: true,
               observer: true,
+              speed: 200,
+              effect: 'fade',
+              fadeEffect: {
+                crossFade: true
+              },
               pagination: {
                 el: ".swiper-pagination",
                 type: "fraction"
